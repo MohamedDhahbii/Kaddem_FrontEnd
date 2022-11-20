@@ -1,22 +1,61 @@
-<div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="300">
-    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-      <div class="form-group">
-        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" height="10px"
+          class="img-fluid" alt="Sample image">
       </div>
-      <div class="form-group">
-        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        
+        {{loginData|json}}
+        <form (ngSubmit)="formSubmit()">
+          
+
+          <div class="divider d-flex align-items-center my-4">
+            <p class="text-center fw-bold mx-3 mb-0">Connexion</p>
+          </div>
+
+        
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form3Example3">Username</label>
+            <input
+            [(ngModel)] = "loginData.username"
+            name="username"
+            required
+             id="form3Example3" class="form-control form-control-lg"
+              placeholder="Entrer Username" />
+          
+          </div>
+
+        
+          <div class="form-outline mb-3">
+            <label class="form-label" for="form3Example4">Password</label>
+            <input 
+            [(ngModel)] = "loginData.password"
+            name="password"
+            required 
+            type="password" id="form3Example4" class="form-control form-control-lg"
+            placeholder="Entrer password" />
+           
+          </div>
+
+        
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="submit" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+          
+          
+          
+          
+              <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
+                class="link-danger">Register</a></p>
+          </div>
+
+        </form>
       </div>
-      <div class="form-group">
-        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-      </div>
-      <div class="form-group">
-        <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-      </div>
-      <div class="my-3">
-        <div class="loading">Loading</div>
-        <div class="error-message"></div>
-        <div class="sent-message">Your message has been sent. Thank you!</div>
-      </div>
-      <div class="text-center"><button type="submit">Send Message</button></div>
-    </form>
+    </div>
   </div>
+  
+  
+</section>
