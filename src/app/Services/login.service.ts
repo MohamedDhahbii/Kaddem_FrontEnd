@@ -1,11 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import baseUrl from './Helpers';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
+
+
+  //public loginStatusSubject = new Subject<boolean>();
+
+
 
   constructor(private http:HttpClient) { }
 
@@ -73,6 +79,15 @@ export class LoginService {
     }
 
   }
+
+
+  public setUser(user:any){
+
+    localStorage.setItem('user', JSON.stringify(user));
+
+
+  }
+
 
   public getUserRole(){
 

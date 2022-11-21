@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { LoginService } from '../Services/login.service';
 
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
   };
 
 
-  constructor(/*private snack:MatSnackBar,*/private login:LoginService) { }
+  constructor(/*private snack:MatSnackBar,*/private login:LoginService, private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -55,10 +56,42 @@ export class LoginComponent implements OnInit {
       (data:any)=>{
         console.log("succes");
         console.log(data);
+
+        this.login.loginUser(data.token);
+
+        this.login.getCurrentUser().subscribe(
+          (user:any)=>{
+            this.login.setUser(user);
+           // console.log(user);
+
+            if(this.login.getUserRole()=='NORMAL'){
+
+              Swal.fire('Bienvenue',this.login.getUser().username, 'success').then((result)=>{
+                if(result.isConfirmed){
+
+                  this.router.navigate(['/']);
+                  
+                 // window.location.href='/';
+                }
+              });
+            //  window.location.href='/';
+
+            }else{
+              this.login.logout();
+            }
+
+
+
+          }
+        )
+
+
+
       },
       (error)=>{
         console.log("Error");
         console.log(error);
+        Swal.fire('Information Invalide', '', 'error');
       }
     );
 

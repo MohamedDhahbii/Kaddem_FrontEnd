@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { authInterceptorProviders } from './Services/auth.Interceptor';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     LoginComponent,
     FooterComponent,
     ContentComponent,
-    ListEtudiantComponent
+    ListEtudiantComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     BrowserAnimationsModule,
     MatSnackBarModule,
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
