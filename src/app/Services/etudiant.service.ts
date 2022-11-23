@@ -17,4 +17,14 @@ export class EtudiantService {
   }
 
 
+  public addEtudiant(etudiant:any){
+
+    return this.http.post(`${baseUrl}/etudiant/add/`,etudiant);
+
+
+  }
+
+
+
+
 }

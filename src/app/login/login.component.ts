@@ -69,7 +69,7 @@ export class LoginComponent implements OnInit {
               Swal.fire('Bienvenue',this.login.getUser().username, 'success').then((result)=>{
                 if(result.isConfirmed){
 
-                  this.router.navigate(['/']);
+                  this.router.navigate(['/dashboard']);
                   
                  // window.location.href='/';
                 }

@@ -15,6 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { authInterceptorProviders } from './Services/auth.Interceptor';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { AddEtudiantComponent } from './add-etudiant/add-etudiant.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FooterComponent,
     ContentComponent,
     ListEtudiantComponent,
-    DashboardComponent
+    DashboardComponent,
+    SidebarComponent,
+    AddEtudiantComponent
   ],
   imports: [
     BrowserModule,
