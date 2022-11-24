@@ -17,6 +17,7 @@ import { authInterceptorProviders } from './Services/auth.Interceptor';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AddEtudiantComponent } from './add-etudiant/add-etudiant.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { AddEtudiantComponent } from './add-etudiant/add-etudiant.component';
     ListEtudiantComponent,
     DashboardComponent,
     SidebarComponent,
-    AddEtudiantComponent
+    AddEtudiantComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

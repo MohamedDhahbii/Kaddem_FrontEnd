@@ -26,5 +26,13 @@ export class EtudiantService {
 
 
 
+  getCountEtudiant(){
+
+    return this.http.get(`${baseUrl}/etudiant/count`);
+
+
+  }
+
+
 
 }
