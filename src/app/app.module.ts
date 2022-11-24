@@ -17,6 +17,10 @@ import { authInterceptorProviders } from './Services/auth.Interceptor';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AddEtudiantComponent } from './add-etudiant/add-etudiant.component';
+import { ListEquipeComponent } from './equipe/list-equipe/list-equipe.component';
+import { AddEquipeComponent } from './equipe/add-equipe/add-equipe.component';
+import { UpdateEquipeComponent } from './equipe/update-equipe/update-equipe.component';
+import { DeleteEquipeComponent } from './equipe/delete-equipe/delete-equipe.component';
 
 
 @NgModule({
@@ -30,7 +34,11 @@ import { AddEtudiantComponent } from './add-etudiant/add-etudiant.component';
     ListEtudiantComponent,
     DashboardComponent,
     SidebarComponent,
-    AddEtudiantComponent
+    AddEtudiantComponent,
+    ListEquipeComponent,
+    AddEquipeComponent,
+    UpdateEquipeComponent,
+    DeleteEquipeComponent
   ],
   imports: [
     BrowserModule,

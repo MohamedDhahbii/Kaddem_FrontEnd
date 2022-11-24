@@ -1,0 +1,39 @@
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-11 container">
+                <div class="card">
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Nom Equipe</th>
+                                    <th>Niveau</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let e of equipes">
+                                    <td>
+                                        {{e.nomEquipe}}
+                                    </td>
+                                    <td>
+                                        {{e.niveau}}
+                                    </td>
+                                    <td class="col-4">
+                                        <button class="btn btn-danger">Supprimer</button>&nbsp;
+                                        <button class="btn btn-warning">Modifier</button>&nbsp;
+                                        <button class="btn btn-info">Voir plus</button>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <a routerLink="/dashboard/add-equipe" class="btn btn-primary">ajouter equipe</a>
+            </div>
+        </div>
+    </div>
+</section>
