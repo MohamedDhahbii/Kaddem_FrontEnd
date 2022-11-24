@@ -19,6 +19,12 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { AddEtudiantComponent } from './add-etudiant/add-etudiant.component';
 import { ProfileComponent } from './profile/profile.component';
 
+import { ListEquipeComponent } from './equipe/list-equipe/list-equipe.component';
+import { AddEquipeComponent } from './equipe/add-equipe/add-equipe.component';
+import { UpdateEquipeComponent } from './equipe/update-equipe/update-equipe.component';
+import { DeleteEquipeComponent } from './equipe/delete-equipe/delete-equipe.component';
+
+
 
 @NgModule({
   declarations: [
@@ -33,6 +39,10 @@ import { ProfileComponent } from './profile/profile.component';
     SidebarComponent,
     AddEtudiantComponent,
     ProfileComponent
+    ListEquipeComponent,
+    AddEquipeComponent,
+    UpdateEquipeComponent,
+    DeleteEquipeComponent
   ],
   imports: [
     BrowserModule,
