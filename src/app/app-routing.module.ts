@@ -4,8 +4,10 @@ import { AddEtudiantComponent } from './Etudiant/add-etudiant/add-etudiant.compo
 import { ContentComponent } from './content/content.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddEquipeComponent } from './equipe/add-equipe/add-equipe.component';
+import { AddContratComponent } from './contrat/add-contrat/add-contrat.component';
 import { ListEquipeComponent } from './equipe/list-equipe/list-equipe.component';
 import { ListEtudiantComponent } from './Etudiant/list-etudiant/list-etudiant.component';
+import { ListContratComponent } from './contrat/list-contrat/list-contrat.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
@@ -18,9 +20,11 @@ const routes: Routes = [
   {path : 'dashboard', component:DashboardComponent, canActivate:[UserGuard],
     children:[
          { path:'list-etudiant',component: ListEtudiantComponent},
+         { path:'list-contrat',component: ListContratComponent},
          {path:'add-etudiant', component:AddEtudiantComponent},
          { path:'update-etudiant/:id', component:UpdateEtudiantComponent},
          {path:'profile', component:ProfileComponent},
+         {path:'add-contrat', component:AddContratComponent},
 
 
          { path:'list-equipe',component: ListEquipeComponent},

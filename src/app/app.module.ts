@@ -24,6 +24,9 @@ import { AddEquipeComponent } from './equipe/add-equipe/add-equipe.component';
 import { UpdateEquipeComponent } from './equipe/update-equipe/update-equipe.component';
 import { DeleteEquipeComponent } from './equipe/delete-equipe/delete-equipe.component';
 import { UpdateEtudiantComponent } from './Etudiant/update-etudiant/update-etudiant.component';
+import { AddContratComponent } from './contrat/add-contrat/add-contrat.component';
+import { ListContratComponent } from './contrat/list-contrat/list-contrat.component';
+import { ModifierContratComponent } from './contrat/modifier-contrat/modifier-contrat.component';
 
 
 
@@ -44,7 +47,10 @@ import { UpdateEtudiantComponent } from './Etudiant/update-etudiant/update-etudi
     AddEquipeComponent,
     UpdateEquipeComponent,
     DeleteEquipeComponent,
-    UpdateEtudiantComponent
+    UpdateEtudiantComponent,
+    AddContratComponent,
+    ListContratComponent,
+    ModifierContratComponent
   ],
   imports: [
     BrowserModule,
