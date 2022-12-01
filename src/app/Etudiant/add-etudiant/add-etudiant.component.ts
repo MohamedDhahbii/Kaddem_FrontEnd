@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
-import { EtudiantService } from '../Services/etudiant.service';
+import { EtudiantService } from 'src/app/Services/etudiant.service';
 
 @Component({
   selector: 'app-add-etudiant',
