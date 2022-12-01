@@ -9,6 +9,7 @@ import { ListEtudiantComponent } from './list-etudiant/list-etudiant.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { UserGuard } from './Services/user.guard';
+import {AddEtudiantToEquipeContratComponent} from "./etudiant/add-etudiant-to-equipe-contrat/add-etudiant-to-equipe-contrat.component";
 
 const routes: Routes = [
   {path: '', component:ContentComponent},
@@ -18,10 +19,11 @@ const routes: Routes = [
          { path:'list-etudiant',component: ListEtudiantComponent},
          { path:'list-equipe',component: ListEquipeComponent},
          { path:'add-equipe',component: AddEquipeComponent},
-         {path:'add-etudiant', component:AddEtudiantComponent}
+         {path:'add-etudiant', component:AddEtudiantComponent},
+         {path:'add-etudiant-to-equipe-contrat', component:AddEtudiantToEquipeContratComponent}
         ]},
 
- 
+
 ];
 
 @NgModule({

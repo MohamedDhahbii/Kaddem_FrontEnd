@@ -20,7 +20,7 @@ import { AddEtudiantComponent } from './add-etudiant/add-etudiant.component';
 import { ListEquipeComponent } from './equipe/list-equipe/list-equipe.component';
 import { AddEquipeComponent } from './equipe/add-equipe/add-equipe.component';
 import { UpdateEquipeComponent } from './equipe/update-equipe/update-equipe.component';
-import { DeleteEquipeComponent } from './equipe/delete-equipe/delete-equipe.component';
+import { AddEtudiantToEquipeContratComponent } from './etudiant/add-etudiant-to-equipe-contrat/add-etudiant-to-equipe-contrat.component';
 
 
 @NgModule({
@@ -38,7 +38,7 @@ import { DeleteEquipeComponent } from './equipe/delete-equipe/delete-equipe.comp
     ListEquipeComponent,
     AddEquipeComponent,
     UpdateEquipeComponent,
-    DeleteEquipeComponent
+    AddEtudiantToEquipeContratComponent
   ],
   imports: [
     BrowserModule,
