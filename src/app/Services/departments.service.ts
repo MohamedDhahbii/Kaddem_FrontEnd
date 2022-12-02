@@ -25,7 +25,7 @@ export class DepartmentsService {
 
   updateDepartment(depatement:any){
   
-    return this.http.put(`${baseUrl}/department/update`, depatement);
+    return this.http.put(`${baseUrl}/depatement/update`, depatement);
 
   }
 
