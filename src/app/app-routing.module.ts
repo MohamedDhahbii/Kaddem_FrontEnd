@@ -47,15 +47,9 @@ const routes: Routes = [
 
          { path:'list-equipe',component: ListEquipeComponent},
          { path:'add-equipe',component: AddEquipeComponent},
-<<<<<<< HEAD
          { path:'update-equipe/:id', component:UpdateEquipeComponent},
          {path:'add-etudiant', component:AddEtudiantComponent},
          {path:'add-etudiant-to-equipe-contrat', component:AddEtudiantToEquipeContratComponent}
-=======
-        // {path:'add-etudiant', component:AddEtudiantComponent}
-
-
->>>>>>> c14fb620f370fbc69e48d66aaf209e42dd324c1e
         ]},
 
 
