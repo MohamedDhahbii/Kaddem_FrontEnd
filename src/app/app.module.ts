@@ -23,10 +23,17 @@ import { ListEquipeComponent } from './equipe/list-equipe/list-equipe.component'
 import { AddEquipeComponent } from './equipe/add-equipe/add-equipe.component';
 import { UpdateEquipeComponent } from './equipe/update-equipe/update-equipe.component';
 import { DeleteEquipeComponent } from './equipe/delete-equipe/delete-equipe.component';
+
+import { ListDepartmentsComponent } from './departments/list-departments/list-departments.component';
+import { AddDepartmentsComponent } from './departments/add-departments/add-departments.component';
+import { DeleteDepartmentsComponent } from './departments/delete-departments/delete-departments.component';
+import { UpdateDepartmentsComponent } from './departments/update-departments/update-departments.component';
+
 import { UpdateEtudiantComponent } from './Etudiant/update-etudiant/update-etudiant.component';
 import { AddContratComponent } from './contrat/add-contrat/add-contrat.component';
 import { ListContratComponent } from './contrat/list-contrat/list-contrat.component';
 import { ModifierContratComponent } from './contrat/modifier-contrat/modifier-contrat.component';
+
 
 
 
@@ -47,10 +54,15 @@ import { ModifierContratComponent } from './contrat/modifier-contrat/modifier-co
     AddEquipeComponent,
     UpdateEquipeComponent,
     DeleteEquipeComponent,
+    ListDepartmentsComponent,
+    AddDepartmentsComponent,
+    DeleteDepartmentsComponent,
+    UpdateDepartmentsComponent
     UpdateEtudiantComponent,
     AddContratComponent,
     ListContratComponent,
     ModifierContratComponent
+
   ],
   imports: [
     BrowserModule,

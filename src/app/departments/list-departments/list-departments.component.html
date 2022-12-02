@@ -1,0 +1,39 @@
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-11 container">
+              <div class="card">
+                <!-- /.card-header -->
+                <div class="card-body">
+                  <table id="example2" class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Nom department</th>                
+                      <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody *ngFor ="let d of departments">
+                    <tr>
+                      <td>{{d.id}}</td>
+                      <td>{{d.nomDepartment}}</td>
+                      
+                      
+                     
+                      <td class="col-4">
+                        <button class="btn btn-danger" (click)="deleteDepartment(d.id)">Supprimer</button>&nbsp;
+                        <button class="btn btn-warning" [routerLink]="'/dashboard/update-department/'+d.id" >Modifier</button>&nbsp;
+                        <button class="btn btn-info" data-bs-toggle="modal"  data-bs-target="#exampleModal" (click)="details(d)">Voir plus</button>
+
+                      </td>
+                  
+                    </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
