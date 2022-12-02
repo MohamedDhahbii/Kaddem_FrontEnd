@@ -1,36 +1,40 @@
 import { Component, OnInit } from '@angular/core';
 import { EtudiantService } from '../Services/etudiant.service';
 import Swal from 'sweetalert2';
+
 @Component({
-  selector: 'app-list-etudiant',
-  templateUrl: './list-etudiant.component.html',
-  styleUrls: ['./list-etudiant.component.css']
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.css']
 })
-export class ListEtudiantComponent implements OnInit {
+export class ProfileComponent implements OnInit {
 
 
-  etudiants : any=[];
-
+  nbEtudiant !:number;
 
   constructor(private etudiant : EtudiantService) { }
 
   ngOnInit(): void {
-    this.getListEtudiant();
+    // this.countEtudiant();
   }
 
 
-  getListEtudiant(){
-    this.etudiant.getEtudiant().subscribe(
+  countEtudiant(){
+
+    this.etudiant.getCountEtudiant().subscribe(
       (data:any)=>{
-        this.etudiants = data;
-        console.log(this.etudiants);
+        this.nbEtudiant = data;
+        //console.log(this.nbEtudiant);
       },
       (error)=>{
         console.log(error);
         Swal.fire('Erreur !!', 'Erreur dans la récupération des deonnées', 'error');
       }
     )
-  }
+  };
+
+
+
 
 
 }

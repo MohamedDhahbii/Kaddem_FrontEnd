@@ -1,1 +1,42 @@
-<p>update-equipe works!</p>
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-11 container">
+          <!-- general form elements -->
+          <div  class="card card-primary">
+            
+            <div style="background-color:#3498db;" class="card-header">
+              <h3 class="card-title">Quick Example</h3>
+            </div>
+          
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form *ngIf="equipeData" (submit)="updateData()">
+                <div class="card-body">
+                    <div class="form-group">
+                      <label  for="exampleInputEmail1">Nom Equipe</label>
+                      <input [(ngModel)] = "equipeData.nomEquipe" name="nomEquipe" type="text" class="form-control"  placeholder="Nom">
+                    </div>
+    
+    
+                    <label>Options</label>
+                    <select name="departement" class="form-select" aria-label="Default select example" [(ngModel)] = "equipeData.niveau" >
+                        
+                        <option value="JUNIOR">JUNIOR</option>
+                        <option value="SENIOR">SENIOR</option>
+                        <option value="EXPERT">EXPERT</option>
+                      </select>
+                  </div>
+              <!-- /.card-body -->
+             
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                
+              </div>
+            </form>
+          </div>
+
+
+        
