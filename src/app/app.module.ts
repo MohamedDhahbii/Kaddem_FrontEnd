@@ -22,13 +22,29 @@ import { ProfileComponent } from './profile/profile.component';
 import { ListEquipeComponent } from './equipe/list-equipe/list-equipe.component';
 import { AddEquipeComponent } from './equipe/add-equipe/add-equipe.component';
 import { UpdateEquipeComponent } from './equipe/update-equipe/update-equipe.component';
+<<<<<<< HEAD
 import { AddEtudiantToEquipeContratComponent } from './etudiant/add-etudiant-to-equipe-contrat/add-etudiant-to-equipe-contrat.component';
 import { UpdateEtudiantComponent } from './etudiant/update-etudiant/update-etudiant.component';
+=======
+import { DeleteEquipeComponent } from './equipe/delete-equipe/delete-equipe.component';
+
+import { ListDepartmentsComponent } from './departments/list-departments/list-departments.component';
+import { AddDepartmentsComponent } from './departments/add-departments/add-departments.component';
+import { DeleteDepartmentsComponent } from './departments/delete-departments/delete-departments.component';
+import { UpdateDepartmentsComponent } from './departments/update-departments/update-departments.component';
+
+import { UpdateEtudiantComponent } from './Etudiant/update-etudiant/update-etudiant.component';
+>>>>>>> c14fb620f370fbc69e48d66aaf209e42dd324c1e
 import { AddContratComponent } from './contrat/add-contrat/add-contrat.component';
 import { ListContratComponent } from './contrat/list-contrat/list-contrat.component';
 import { ModifierContratComponent } from './contrat/modifier-contrat/modifier-contrat.component';
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> c14fb620f370fbc69e48d66aaf209e42dd324c1e
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,11 +61,20 @@ import { ModifierContratComponent } from './contrat/modifier-contrat/modifier-co
     ListEquipeComponent,
     AddEquipeComponent,
     UpdateEquipeComponent,
+<<<<<<< HEAD
     AddEtudiantToEquipeContratComponent,
+=======
+    DeleteEquipeComponent,
+    ListDepartmentsComponent,
+    AddDepartmentsComponent,
+    DeleteDepartmentsComponent,
+    UpdateDepartmentsComponent
+>>>>>>> c14fb620f370fbc69e48d66aaf209e42dd324c1e
     UpdateEtudiantComponent,
     AddContratComponent,
     ListContratComponent,
     ModifierContratComponent
+
   ],
   imports: [
     BrowserModule,
