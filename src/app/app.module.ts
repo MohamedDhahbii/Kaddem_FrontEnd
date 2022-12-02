@@ -23,6 +23,10 @@ import { ListEquipeComponent } from './equipe/list-equipe/list-equipe.component'
 import { AddEquipeComponent } from './equipe/add-equipe/add-equipe.component';
 import { UpdateEquipeComponent } from './equipe/update-equipe/update-equipe.component';
 import { DeleteEquipeComponent } from './equipe/delete-equipe/delete-equipe.component';
+import { ListDepartmentsComponent } from './departments/list-departments/list-departments.component';
+import { AddDepartmentsComponent } from './departments/add-departments/add-departments.component';
+import { DeleteDepartmentsComponent } from './departments/delete-departments/delete-departments.component';
+import { UpdateDepartmentsComponent } from './departments/update-departments/update-departments.component';
 
 
 
@@ -38,11 +42,15 @@ import { DeleteEquipeComponent } from './equipe/delete-equipe/delete-equipe.comp
     DashboardComponent,
     SidebarComponent,
     AddEtudiantComponent,
-    ProfileComponent
+    ProfileComponent,
     ListEquipeComponent,
     AddEquipeComponent,
     UpdateEquipeComponent,
-    DeleteEquipeComponent
+    DeleteEquipeComponent,
+    ListDepartmentsComponent,
+    AddDepartmentsComponent,
+    DeleteDepartmentsComponent,
+    UpdateDepartmentsComponent
   ],
   imports: [
     BrowserModule,
