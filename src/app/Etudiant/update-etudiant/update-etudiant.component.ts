@@ -37,7 +37,7 @@ export class UpdateEtudiantComponent implements OnInit {
    // alert('clicked');
    this.etudiant.updateEtudiant(this.etud).subscribe(
     (data)=>{
-      Swal.fire('Success !!', 'Examen modifié avec succé', 'success').then((e)=>{
+      Swal.fire('Success !!', 'Etudiant modifié avec succé', 'success').then((e)=>{
         this.router.navigate(['/dashboard/list-etudiant']);
       });
     }

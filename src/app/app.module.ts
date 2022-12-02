@@ -28,6 +28,8 @@ import { AddContratComponent } from './contrat/add-contrat/add-contrat.component
 import { ListContratComponent } from './contrat/list-contrat/list-contrat.component';
 import { ModifierContratComponent } from './contrat/modifier-contrat/modifier-contrat.component';
 
+import { DatePipe } from '@angular/common'
+
 
 
 @NgModule({
@@ -60,7 +62,10 @@ import { ModifierContratComponent } from './contrat/modifier-contrat/modifier-co
     BrowserAnimationsModule,
     MatSnackBarModule,
   ],
-  providers: [authInterceptorProviders],
-  bootstrap: [AppComponent]
+  providers: [authInterceptorProviders, DatePipe],
+  bootstrap: [AppComponent],
+ 
+  
+  
 })
 export class AppModule { }

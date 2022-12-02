@@ -39,7 +39,7 @@ export class AddEtudiantComponent implements OnInit {
 
     this.etudiant.addEtudiant(this.etudiantData).subscribe(
       (data:any)=>{
-        Swal.fire('Succé', 'Etudiant ajouté avec succé', 'success');
+        Swal.fire('Succès', 'Etudiant ajouté avec succé', 'success');
       },
       (error)=>{
         Swal.fire('Erreur !', 'Erreur de cette opération', 'error');
