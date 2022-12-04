@@ -15,6 +15,9 @@ export class ListEtudiantComponent implements OnInit {
   totalLength:any;
   page:number = 1;
 
+  searchText:string='';
+  
+
   etudiantData={
     id:'',
     nom:'',
@@ -112,6 +115,13 @@ export class ListEtudiantComponent implements OnInit {
 
     }
   
+
+
+    onSearchTextChanged(searchValue:string){
+
+      this.searchText = searchValue;
+      console.log(this.searchText);
+    }
 
 
 

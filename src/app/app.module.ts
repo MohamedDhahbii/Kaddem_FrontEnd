@@ -35,9 +35,9 @@ import { ListContratComponent } from './contrat/list-contrat/list-contrat.compon
 import { ModifierContratComponent } from './contrat/modifier-contrat/modifier-contrat.component';
 
 import { DatePipe } from '@angular/common';
-import { PaginationComponent } from './pagination/pagination.component'
 
 import { NgxPaginationModule } from 'ngx-pagination';
+import { SearchComponent } from './search/search.component';
 
 
 
@@ -67,7 +67,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     AddContratComponent,
     ListContratComponent,
     ModifierContratComponent,
-    PaginationComponent
+    SearchComponent
 
   ],
   imports: [
