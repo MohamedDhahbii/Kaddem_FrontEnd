@@ -4,10 +4,13 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-11 container">
+
+             <app-search (searchTextChanged)="onSearchTextChanged($event)"></app-search>
+
               <div class="card">
                 <!-- /.card-header -->
                 <div class="card-body">
-                  <table id="example2" class="table table-bordered table-hover">
+                  <table id="example2" class="table table-bordered table-hover" >
                     <thead>
                     <tr>
                       <th>ID</th>
@@ -17,11 +20,12 @@
                       <th>Action</th>
                     </tr>
                     </thead>
-                    <tbody *ngFor ="let e of etudiants | paginate : {itemsPerPage:2,
+                    <tbody *ngFor ="let e of etudiants | paginate : {itemsPerPage:10,
                        currentPage:page,
                        totalItems:totalLength  
-                      }" >
-                    <tr>
+                      }" 
+                     >
+                    <tr  *ngIf="searchText === '' || e.nom.toLowerCase().includes(searchText) || e.prenom.toLowerCase().includes(searchText)">
                       <td>{{e.id}}</td>
                       <td>{{e.nom}}</td>
                       <td>{{e.prenom}}</td>
