@@ -33,7 +33,7 @@ const routes: Routes = [
          {path:'add-etudiant', component:AddEtudiantComponent},
          { path:'add-department',component: AddDepartmentsComponent},
          {path:'list-department', component:ListDepartmentsComponent},
-         { path:'update-department/:id', component:UpdateDepartmentsComponent}
+         { path:'update-department/:id', component:UpdateDepartmentsComponent},
 
          { path:'update-etudiant/:id', component:UpdateEtudiantComponent},
          {path:'profile', component:ProfileComponent},

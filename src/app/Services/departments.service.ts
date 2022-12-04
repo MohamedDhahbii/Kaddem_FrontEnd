@@ -11,7 +11,7 @@ export class DepartmentsService {
 
   public getDepartments(){
 
-    return this.http.get(`${baseUrl}/depatement`);
+    return this.http.get(`${baseUrl}/departement`);
     
 
   }

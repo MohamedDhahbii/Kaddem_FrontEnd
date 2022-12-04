@@ -16,12 +16,12 @@
             <form (ngSubmit)="addContrat()">
               <div class="card-body">
                 <div class="form-group">
-                  <label  for="exampleInputEmail1">dateDebutContrat</label>
-                  <input [(ngModel)] = "ContratData.dateDebutContrat" date_debut="dateDebutContrat" type="date" class="form-control"  placeholder="dateD">
+                  <label>dateDebutContrat</label>
+                  <input [(ngModel)] = "ContratData.dateDebutContrat" type="date" class="form-control" ngbDatePicker="#dd"  name="dateDebutContrat">
                 </div>
                 <div class="form-group">
                   <label>dateFinContrat</label>
-                  <input name="dateFinContrat" [(ngModel)] = "ContratData.dateFinContrat"  type="text" class="form-control"  placeholder="dateFinContrat">
+                  <input name="dateFinContrat" [(ngModel)] = "ContratData.dateFinContrat"  type="date" class="form-control"  placeholder="dateFinContrat">
                 </div>
 
 
