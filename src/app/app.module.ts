@@ -34,7 +34,10 @@ import { AddContratComponent } from './contrat/add-contrat/add-contrat.component
 import { ListContratComponent } from './contrat/list-contrat/list-contrat.component';
 import { ModifierContratComponent } from './contrat/modifier-contrat/modifier-contrat.component';
 
-import { DatePipe } from '@angular/common'
+import { DatePipe } from '@angular/common';
+import { PaginationComponent } from './pagination/pagination.component'
+
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -59,11 +62,12 @@ import { DatePipe } from '@angular/common'
     ListDepartmentsComponent,
     AddDepartmentsComponent,
     DeleteDepartmentsComponent,
-    UpdateDepartmentsComponent
+    UpdateDepartmentsComponent,
     UpdateEtudiantComponent,
     AddContratComponent,
     ListContratComponent,
-    ModifierContratComponent
+    ModifierContratComponent,
+    PaginationComponent
 
   ],
   imports: [
@@ -73,6 +77,7 @@ import { DatePipe } from '@angular/common'
     FormsModule,
     BrowserAnimationsModule,
     MatSnackBarModule,
+    NgxPaginationModule,
   ],
   providers: [authInterceptorProviders, DatePipe],
   bootstrap: [AppComponent],

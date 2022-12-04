@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EtudiantService } from 'src/app/Services/etudiant.service';
+import { DepartmentsService } from 'src/app/Services/departments.service';
 import Swal from 'sweetalert2';
 @Component({
   selector: 'app-list-etudiant',
@@ -11,20 +12,36 @@ export class ListEtudiantComponent implements OnInit {
 
   etudiants : any=[];
 
-
+  totalLength:any;
+  page:number = 1;
 
   etudiantData={
     id:'',
     nom:'',
     prenom:'',
     opt:'',
-    departement:'',
+    departement:{
+      id:'',
+    },
   };
 
+ // departments:any=[];
 
-  constructor(private etudiant : EtudiantService) { }
+
+
+  constructor(private etudiant : EtudiantService, private dept : DepartmentsService) { }
 
   ngOnInit(): void {
+ /*   this.dept.getDepartments().subscribe(
+      (data)=>{
+        this.departments = data;
+        console.log(this.departments);
+      },
+      (error)=>{
+        console.log(error);
+        Swal.fire('Erreur','Erreur récuperation de données', 'error');
+      }
+    );*/
     this.getListEtudiant();
   }
 
@@ -33,11 +50,14 @@ export class ListEtudiantComponent implements OnInit {
     this.etudiant.getEtudiant().subscribe(
       (data:any)=>{
         this.etudiants = data;
+
+        this.totalLength = data.length;
+
         console.log(this.etudiants);
       },
       (error)=>{
         console.log(error);
-        Swal.fire('Erreur !!', 'Erreur dans la récupération des deonnées', 'error');
+        Swal.fire('Erreur !!', 'Erreur dans la récupération des données', 'error');
       }
     )
   }
@@ -77,7 +97,7 @@ export class ListEtudiantComponent implements OnInit {
         this.etudiant.deleteEtudiant(id).subscribe(
           (data)=>{
            
-            Swal.fire('Succé', 'Etudiant supprimée avec succé', 'success'); 
+            Swal.fire('Succés', 'Etudiant supprimée avec succé', 'success'); 
             window.location.reload();
           },
           

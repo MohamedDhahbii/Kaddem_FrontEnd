@@ -34,7 +34,7 @@ export class AddContratComponent implements OnInit {
     }
 
 
-
+    console.log(this.ContratData.dateDebutContrat);
 
     this.contrat.addContrat(this.ContratData).subscribe(
       (data:any)=>{
