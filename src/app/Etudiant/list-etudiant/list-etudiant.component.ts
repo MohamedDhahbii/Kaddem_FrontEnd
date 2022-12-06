@@ -25,26 +25,18 @@ export class ListEtudiantComponent implements OnInit {
     opt:'',
     departement:{
       id:'',
+      nomDepartment:'',
+
     },
   };
 
- // departments:any=[];
+  
 
 
 
   constructor(private etudiant : EtudiantService, private dept : DepartmentsService) { }
 
   ngOnInit(): void {
- /*   this.dept.getDepartments().subscribe(
-      (data)=>{
-        this.departments = data;
-        console.log(this.departments);
-      },
-      (error)=>{
-        console.log(error);
-        Swal.fire('Erreur','Erreur récuperation de données', 'error');
-      }
-    );*/
     this.getListEtudiant();
   }
 
@@ -72,20 +64,6 @@ export class ListEtudiantComponent implements OnInit {
   }
 
 
-  /*updateEtudiant(){
-    this.etudiant.updateEtudiant(this.etudiantData).subscribe(
-      (data)=>{
-
-        console.log(data);
-        
-      },
-      (error)=>{
-       console.log(error);
-
-        
-      }
-    );
-  }*/
 
 
   deleteEtudiant(id:any){
