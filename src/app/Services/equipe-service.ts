@@ -24,6 +24,26 @@ export class EquipeService {
 
   }
 
+  updateEquipe(equipe:any){
+
+    return this.http.put(`${baseUrl}/equipe/update`, equipe);
+
+  }
+
+  deleteEquipe(id:any){
+
+    return this.http.delete(`${baseUrl}/equipe/delete/${id}`);
+  }
+
+
+
+  getSingleEquipe(id:any){
+
+
+    return this.http.get(`${baseUrl}/equipe/${id}`);
+
+  }
+
 
 
 

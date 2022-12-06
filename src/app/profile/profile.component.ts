@@ -15,7 +15,7 @@ export class ProfileComponent implements OnInit {
   constructor(private etudiant : EtudiantService) { }
 
   ngOnInit(): void {
-    this.countEtudiant();
+    // this.countEtudiant();
   }
 
 

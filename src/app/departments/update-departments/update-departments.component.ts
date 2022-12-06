@@ -32,8 +32,11 @@ export class UpdateDepartmentsComponent implements OnInit {
   }
 
   updateData(){
+    console.log("update");
+    console.log(this.dept);
    // alert('clicked');
    this.department.updateDepartment(this.dept).subscribe(
+    
     (data)=>{
       Swal.fire('Success !!', 'Departments modifié avec succé', 'success').then((e)=>{
         this.router.navigate(['/dashboard/list-department']);

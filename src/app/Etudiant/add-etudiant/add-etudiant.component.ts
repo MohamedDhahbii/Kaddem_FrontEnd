@@ -49,7 +49,7 @@ export class AddEtudiantComponent implements OnInit {
     //console.log(this.etudiantData);
 
     if(this.etudiantData.nom.trim() == '' || this.etudiantData.prenom.trim() == ''){
-      //Swal.fire('Succé', ' ajouté avec succé', 'success');
+      Swal.fire('Erreur !', 'Erreur les valeur sont', 'error');
     }
 
     this.etudiant.addEtudiant(this.etudiantData).subscribe(
