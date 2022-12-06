@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { DepartmentsService } from 'src/app/Services/departments.service';
 import { EtudiantService } from 'src/app/Services/etudiant.service';
 import Swal from 'sweetalert2';
 
@@ -13,9 +14,10 @@ export class UpdateEtudiantComponent implements OnInit {
 
   id=0;
   etud:any;
+  departments : any = [];
   
 
-  constructor(private route:ActivatedRoute,private etudiant : EtudiantService, private router : Router) { }
+  constructor(private route:ActivatedRoute,private etudiant : EtudiantService, private router : Router, private dept : DepartmentsService) { }
 
   ngOnInit(): void {
 
@@ -29,7 +31,17 @@ export class UpdateEtudiantComponent implements OnInit {
       (error)=>{
         console.log(error);
       }
-    )
+    );
+
+      this.dept.getDepartments().subscribe(
+        (data:any)=>{
+          this.departments = data;
+        },
+        (error)=>{
+          alert('Erreur au cours de récupération des departements');
+        }
+      )
+
   }
 
 
@@ -40,8 +52,12 @@ export class UpdateEtudiantComponent implements OnInit {
       Swal.fire('Success !!', 'Etudiant modifié avec succé', 'success').then((e)=>{
         this.router.navigate(['/dashboard/list-etudiant']);
       });
+    },
+    (error)=>{
+      Swal.fire('Error', 'Erreur de modification', 'error');
+      console.log(error);
     }
-   )
+   );
   }
 
 }

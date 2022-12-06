@@ -15,21 +15,21 @@ export class AddEtudiantComponent implements OnInit {
     nom:'',
     prenom:'',
     opt:'',
-    departement:null,
-    /*{
+    departement:
+    {
       id:'',
-    },*/
+    }
   };
 
 
-  //departments:any=[];
+  departments:any=[];
 
 
   constructor(private etudiant:EtudiantService, private dept : DepartmentsService) { }
 
   ngOnInit(): void {
 
-   /* this.dept.getDepartments().subscribe(
+    this.dept.getDepartments().subscribe(
       (data)=>{
         this.departments = data;
         console.log(this.departments);
@@ -38,7 +38,7 @@ export class AddEtudiantComponent implements OnInit {
         console.log(error);
         Swal.fire('Erreur','Erreur récuperation de données', 'error');
       }
-    )*/
+    )
 
   }
 
