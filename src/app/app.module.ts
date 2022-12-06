@@ -34,6 +34,11 @@ import { AddContratComponent } from './contrat/add-contrat/add-contrat.component
 import { ListContratComponent } from './contrat/list-contrat/list-contrat.component';
 import { ModifierContratComponent } from './contrat/modifier-contrat/modifier-contrat.component';
 
+import { DatePipe } from '@angular/common';
+
+import { NgxPaginationModule } from 'ngx-pagination';
+import { SearchComponent } from './search/search.component';
+
 
 
 @NgModule({
@@ -60,7 +65,8 @@ import { ModifierContratComponent } from './contrat/modifier-contrat/modifier-co
     UpdateEtudiantComponent,
     AddContratComponent,
     ListContratComponent,
-    ModifierContratComponent
+    ModifierContratComponent,
+    SearchComponent
 
   ],
   imports: [
@@ -70,8 +76,13 @@ import { ModifierContratComponent } from './contrat/modifier-contrat/modifier-co
     FormsModule,
     BrowserAnimationsModule,
     MatSnackBarModule,
+    NgxPaginationModule,
+    ReactiveFormsModule
   ],
-  providers: [authInterceptorProviders],
-  bootstrap: [AppComponent]
+  providers: [authInterceptorProviders, DatePipe],
+  bootstrap: [AppComponent],
+ 
+  
+  
 })
 export class AppModule { }

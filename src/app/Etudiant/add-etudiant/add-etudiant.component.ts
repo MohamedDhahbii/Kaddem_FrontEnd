@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
 import { EtudiantService } from 'src/app/Services/etudiant.service';
+import { DepartmentsService } from 'src/app/Services/departments.service';
+
 
 @Component({
   selector: 'app-add-etudiant',
@@ -14,14 +16,30 @@ export class AddEtudiantComponent implements OnInit {
     prenom:'',
     opt:'',
     departement:null,
+    /*{
+      id:'',
+    },*/
   };
 
 
+  //departments:any=[];
 
 
-  constructor(private etudiant:EtudiantService) { }
+  constructor(private etudiant:EtudiantService, private dept : DepartmentsService) { }
 
   ngOnInit(): void {
+
+   /* this.dept.getDepartments().subscribe(
+      (data)=>{
+        this.departments = data;
+        console.log(this.departments);
+      },
+      (error)=>{
+        console.log(error);
+        Swal.fire('Erreur','Erreur récuperation de données', 'error');
+      }
+    )*/
+
   }
 
 
@@ -31,15 +49,18 @@ export class AddEtudiantComponent implements OnInit {
     //console.log(this.etudiantData);
 
     if(this.etudiantData.nom.trim() == '' || this.etudiantData.prenom.trim() == ''){
-      //Swal.fire('Succé', 'Examen ajouté avec succé', 'success');
+      Swal.fire('Erreur !', 'Erreur les valeur sont', 'error');
     }
-
-
-
 
     this.etudiant.addEtudiant(this.etudiantData).subscribe(
       (data:any)=>{
-        Swal.fire('Succé', 'Etudiant ajouté avec succé', 'success');
+      
+        Swal.fire('Succès', 'Etudiant ajouté avec succé', 'success');
+        
+        console.log(data);
+
+
+
       },
       (error)=>{
         Swal.fire('Erreur !', 'Erreur de cette opération', 'error');
@@ -48,6 +69,7 @@ export class AddEtudiantComponent implements OnInit {
       );
 
 
+      
 
 
   }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Equipe } from 'src/app/Models/Equipe';
 import { EquipeService } from 'src/app/Services/equipe-service';
 import Swal from 'sweetalert2';
 
@@ -11,6 +12,7 @@ import Swal from 'sweetalert2';
 export class UpdateEquipeComponent implements OnInit {
 
   id = 0;
+  equipe : Equipe = new Equipe();
   equipeData: any;
   constructor(private route:ActivatedRoute,private equipeService : EquipeService, private router : Router) { }
 
@@ -20,8 +22,8 @@ export class UpdateEquipeComponent implements OnInit {
 
     this.equipeService.getSingleEquipe(this.id).subscribe(
       (data)=>{
-        this.equipeData = data;
-        console.log(this.equipeData);
+        this.equipe = data;
+        console.log(this.equipe);
       },
       (error)=>{
         console.log(error);
@@ -32,7 +34,7 @@ export class UpdateEquipeComponent implements OnInit {
 
   updateData(){
    // alert('clicked');
-   this.equipeService.updateEquipe(this.equipeData).subscribe(
+   this.equipeService.updateEquipe(this.equipe).subscribe(
     ()=>{
       Swal.fire('Success !!', 'Equipe modifiée avec succé', 'success').then((e)=>{
         this.router.navigate(['/dashboard/list-equipe']);

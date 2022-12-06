@@ -13,16 +13,16 @@
           
             <!-- /.card-header -->
             <!-- form start -->
-            <form *ngIf="equipeData" (submit)="updateData()">
+            <form *ngIf="equipe" (submit)="updateData()">
                 <div class="card-body">
                     <div class="form-group">
                       <label  for="exampleInputEmail1">Nom Equipe</label>
-                      <input [(ngModel)] = "equipeData.nomEquipe" name="nomEquipe" type="text" class="form-control"  placeholder="Nom">
+                      <input [(ngModel)] = "equipe.nomEquipe" name="nomEquipe" type="text" class="form-control"  placeholder="Nom">
                     </div>
     
     
                     <label>Options</label>
-                    <select name="departement" class="form-select" aria-label="Default select example" [(ngModel)] = "equipeData.niveau" >
+                    <select name="departement" class="form-select" aria-label="Default select example" [(ngModel)] = "equipe.niveau" >
                         
                         <option value="JUNIOR">JUNIOR</option>
                         <option value="SENIOR">SENIOR</option>
