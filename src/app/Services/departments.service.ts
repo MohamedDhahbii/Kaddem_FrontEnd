@@ -19,27 +19,26 @@ export class DepartmentsService {
 
   public addDepartment(depatement:any){
 
-    return this.http.post(`${baseUrl}/depatement/add/`,depatement);
+    return this.http.post(`${baseUrl}/departement/add/`,depatement);
 
   }
 
   updateDepartment(depatement:any){
   
-    return this.http.put(`${baseUrl}/depatement/update`, depatement);
+    return this.http.put(`${baseUrl}/departement/update`, depatement);
 
   }
 
   deleteDepartment(id:any){
 
-    return this.http.delete(`${baseUrl}/depatement/delete/${id}`);
+    return this.http.delete(`${baseUrl}/departement/delete/${id}`);
   }
 
 
 
   getDepartment(id:any){
 
-
-    return this.http.get(`${baseUrl}/depatement/${id}`);
+    return this.http.get(`${baseUrl}/departement/${id}`);
 
   }
 }
