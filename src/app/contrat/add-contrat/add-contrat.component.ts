@@ -1,6 +1,7 @@
 import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ContratService } from 'src/app/Services/contrat.service';
+import { EtudiantService } from 'src/app/Services/etudiant.service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -15,12 +16,29 @@ export class AddContratComponent implements OnInit {
     dateFinContrat:'',
     specialite:'',
     archive:'',
-    etudiant:null,
+    etudiant:{
+      id:'',
+    },
   };
 
-  constructor(private contrat:ContratService, /*public datepipe: DatePipe*/) { }
+  etudiants:any=[];
+
+
+  constructor(private contrat:ContratService, private etudiant : EtudiantService) { }
 
   ngOnInit(): void {
+
+  this.etudiant.getEtudiant().subscribe(
+    (data)=>{
+      this.etudiants = data;
+      console.log(this.etudiants);
+    },
+    (error)=>{
+      console.log(error);
+    }
+  )
+
+
   }
 
 

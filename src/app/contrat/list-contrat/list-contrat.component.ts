@@ -12,13 +12,18 @@ export class ListContratComponent implements OnInit {
   Contrats : any=[];
 
 
+  totalLength:any;
+  page:number = 1;
+
   ContratData={
     id:'',
     dateDebutContrat:'',
     dateFinContrat:'',
     specialite:'',
     archive:'',
-    etudiant:null,
+    etudiant:{
+      id:'',
+    },
   };
 
   constructor(private contrat:ContratService) { }
