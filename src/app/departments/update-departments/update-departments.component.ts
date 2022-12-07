@@ -14,7 +14,8 @@ export class UpdateDepartmentsComponent implements OnInit {
   constructor(private route:ActivatedRoute,private department : DepartmentsService, private router : Router) { }
   departmentData={
     nomDepartment:'',
-    universite:null,
+    chefDepartment:'',
+    nombreSalle:''
   };
   ngOnInit(): void {
 

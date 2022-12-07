@@ -13,6 +13,8 @@ export class ListDepartmentsComponent implements OnInit {
   departmentData={
     id:'',
     nomDepartment:'',
+    chefDepartment:'',
+    nombreSalle:''
   };
   constructor(private department:DepartmentsService) { }
 

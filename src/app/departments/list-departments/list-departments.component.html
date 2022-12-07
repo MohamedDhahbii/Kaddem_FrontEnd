@@ -12,13 +12,17 @@
                   <tr>
                     <th>ID</th>
                     <th>Nom department</th>
+                    <th>Chef department</th>
+                    <th>Nombre des salles</th>
                     <th>Actions</th>
                   </tr>
                   </thead>
                   <tbody *ngFor ="let d of departments">
                   <tr>
                     <td>{{d.id}}</td>
-                    <td>{{d.nomDepartment}}</td>                   
+                    <td>{{d.nomDepartment}}</td>   
+                    <td>{{d.chefDepartment}}</td> 
+                    <td>{{d.nombreSalle}}</td>                 
                     <td class="col-4">
                       <button class="btn btn-danger" (click)="deleteDepartment(d.id)">Supprimer</button>&nbsp;
                       <button class="btn btn-warning" [routerLink]="'/dashboard/update-department/'+d.id" >Modifier</button>&nbsp;
@@ -55,6 +59,8 @@
                       </div>
                       <ul class="list-group list-group-flush">
                         <li class="list-group-item">Nom department : {{departmentData.nomDepartment}}</li>
+                        <li class="list-group-item">Nom department : {{departmentData.chefDepartment}}</li>
+                        <li class="list-group-item">Nom department : {{departmentData.nombreSalle}}</li>
                       
                         <!--li class="list-group-item">{{etudiantData.departement}}</li-->
 

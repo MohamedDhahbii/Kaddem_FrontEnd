@@ -12,6 +12,8 @@ export class AddDepartmentsComponent implements OnInit {
 
   departmentData={
     nomDepartment:'',
+    chefDepartment:'',
+    nombreSalle:''
   };
 
   constructor(private department:DepartmentsService,private router : Router) { }

@@ -38,6 +38,9 @@ import { DatePipe } from '@angular/common';
 
 import { NgxPaginationModule } from 'ngx-pagination';
 import { SearchComponent } from './search/search.component';
+import { AddUniversiteComponent } from './universite/add-universite/add-universite.component';
+import { ListUniversiteComponent } from './universite/list-universite/list-universite.component';
+import { UpdateUniversiteComponent } from './universite/update-universite/update-universite.component';
 
 
 
@@ -67,6 +70,9 @@ import { SearchComponent } from './search/search.component';
     ListContratComponent,
     ModifierContratComponent,
     SearchComponent,
+    AddUniversiteComponent,
+    ListUniversiteComponent,
+    UpdateUniversiteComponent,
 
 
   ],

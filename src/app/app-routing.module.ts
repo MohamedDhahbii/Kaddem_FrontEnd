@@ -21,6 +21,9 @@ import {AddEtudiantToEquipeContratComponent} from "./etudiant/add-etudiant-to-eq
 import { UpdateEtudiantComponent } from './Etudiant/update-etudiant/update-etudiant.component';
 import { UpdateEquipeComponent } from './equipe/update-equipe/update-equipe.component';
 import { ModifierContratComponent } from './contrat/modifier-contrat/modifier-contrat.component';
+import { AddUniversiteComponent } from './universite/add-universite/add-universite.component';
+import { ListUniversiteComponent } from './universite/list-universite/list-universite.component';
+import { UpdateUniversiteComponent } from './universite/update-universite/update-universite.component';
 
 
 const routes: Routes = [
@@ -40,6 +43,9 @@ const routes: Routes = [
          { path:'add-department',component: AddDepartmentsComponent},
          {path:'list-department', component:ListDepartmentsComponent},
          { path:'update-department/:id', component:UpdateDepartmentsComponent},
+         { path:'add-universite',component: AddUniversiteComponent},
+         {path:'list-universite', component:ListUniversiteComponent},
+         { path:'update-universite/:id', component:UpdateUniversiteComponent},
 
          { path:'update-etudiant/:id', component:UpdateEtudiantComponent},
          {path:'profile', component:ProfileComponent},

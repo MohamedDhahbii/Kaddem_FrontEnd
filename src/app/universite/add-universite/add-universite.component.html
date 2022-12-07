@@ -6,22 +6,22 @@
         <div class="col-md-11 container">
           <!-- general form elements -->
           <div  class="card card-primary">
-            {{departmentData|json}}
+            {{universiteData|json}}
             <div style="background-color:#3498db;" class="card-header">
               <h3 class="card-title">Quick Example</h3>
             </div>
           
             <!-- /.card-header -->
             <!-- form start -->
-            <form (ngSubmit)="addDepartment()">
+            <form (ngSubmit)="addUniversite()">
               <div class="card-body">
                 <div class="form-group">
-                  <label  for="exampleInputEmail1">Nom Department</label>
-                  <input [(ngModel)] = "departmentData.nomDepartment" name="nom" type="text" class="form-control"  placeholder="Nom department">
-                  <label  for="exampleInputEmail1">Chef Department</label>
-                  <input [(ngModel)] = "departmentData.chefDepartment" name="chef" type="text" class="form-control"  placeholder="Chef department">
-                  <label  for="exampleInputEmail1">Nombre des salles </label>
-                  <input [(ngModel)] = "departmentData.nombreSalle" name="nb" type="text" class="form-control"  placeholder="Nombre des salle">
+                  <label  for="exampleInputEmail1">Nom universite</label>
+                  <input [(ngModel)] = "universiteData.nomUniversite" name="nom" type="text" class="form-control"  placeholder="Nom universite">
+                  <label  for="exampleInputEmail1">Localisation </label>
+                  <input [(ngModel)] = "universiteData.localisation" name="loc" type="text" class="form-control"  placeholder="Localisation">
+                  <label  for="exampleInputEmail1">Région </label>
+                  <input [(ngModel)] = "universiteData.region" name="reg" type="text" class="form-control"  placeholder="Region">
                 </div>          
               </div>
               <!-- /.card-body -->
