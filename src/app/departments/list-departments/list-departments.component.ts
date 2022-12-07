@@ -8,7 +8,8 @@ import Swal from 'sweetalert2';
   styleUrls: ['./list-departments.component.css']
 })
 export class ListDepartmentsComponent implements OnInit {
-
+  totalLength:any;
+  page:number = 1;
   departments : any=[];
   departmentData={
     id:'',

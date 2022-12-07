@@ -17,7 +17,11 @@
                     <th>Actions</th>
                   </tr>
                   </thead>
-                  <tbody *ngFor ="let d of departments">
+                  <tbody *ngFor ="let d of departments | paginate : {itemsPerPage:4,
+                    currentPage:page,
+                    totalItems:totalLength  
+                   }" 
+                  >
                   <tr>
                     <td>{{d.id}}</td>
                     <td>{{d.nomDepartment}}</td>   
@@ -37,6 +41,7 @@
               </div>
               <!-- /.card-body -->
             </div>
+            <pagination-controls (pageChange)="page = $event"></pagination-controls>
             <!-- /.card -->
             <a routerLink="/dashboard/add-department" class="btn btn-primary">ajouter department</a>
 

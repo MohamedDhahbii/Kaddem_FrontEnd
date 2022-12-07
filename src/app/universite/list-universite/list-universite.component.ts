@@ -15,6 +15,8 @@ export class ListUniversiteComponent implements OnInit {
     localisation:'',
     region:''
   };
+  totalLength:any;
+  page:number = 1;
   constructor(private universite:UniversiteService) { }
 
   ngOnInit(): void {

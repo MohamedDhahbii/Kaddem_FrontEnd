@@ -17,7 +17,11 @@
                       <th>Actions</th>
                     </tr>
                     </thead>
-                    <tbody *ngFor ="let u of universites">
+                    <tbody *ngFor ="let u of universites | paginate : {itemsPerPage:5,
+                      currentPage:page,
+                      totalItems:totalLength  
+                     }" 
+                    >
                     <tr>
                       <td>{{u.id}}</td>
                       <td>{{u.nomUniversite}}</td>   
@@ -38,6 +42,7 @@
                 <!-- /.card-body -->
               </div>
               <!-- /.card -->
+              <pagination-controls (pageChange)="page = $event"></pagination-controls>
               <a routerLink="/dashboard/add-universite" class="btn btn-primary">ajouter universite</a>
   
   
