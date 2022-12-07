@@ -36,6 +36,17 @@
 
 
 
+
+                  <label>Etudiants</label>
+                  <select name="departement"  class="form-select" aria-label="Default select example" [(ngModel)] = "ContratData.etudiant.id" >
+                      
+                    <option *ngFor="let e of etudiants" [value]="e.id">{{e.nom}} {{e.prenom}}</option>
+                    </select>
+                 
+
+
+
+
                <!-- <select class="form-select" aria-label="Default select example">
                     <option selected>Département</option>
                     <option value="1">One</option>

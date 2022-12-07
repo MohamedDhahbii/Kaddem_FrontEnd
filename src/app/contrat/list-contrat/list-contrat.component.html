@@ -14,12 +14,14 @@
                       <th>dateDebutContrat</th>
                       <th>dateFinContrat</th>
                       <th>specialite</th>
-                      <th>archive</th>
-                      <th>etudiant_id</th>
                       <th>Action</th>
                     </tr>
                     </thead>
-                    <tbody *ngFor ="let c of Contrats">
+                    <tbody *ngFor ="let c of Contrats | paginate : {itemsPerPage:2,
+                      currentPage:page,
+                      totalItems:totalLength  
+                     }" 
+                    >
                     <tr>
                       <td>{{c.id}}</td>
                       <td>{{c.dateDebutContrat}}</td>
@@ -29,7 +31,10 @@
                       <td class="col-4">
                         <button class="btn btn-danger" (click)="deleteContrat(c.id)">Supprimer</button>&nbsp;
                         <button class="btn btn-warning" [routerLink]="'/dashboard/modifier-contrat/'+c.id" >Modifier</button>&nbsp;
-                        <button class="btn btn-info" data-bs-toggle="modal"  data-bs-target="#exampleModal" (click)="details(c)">Voir plus</button>
+                        <button class="btn btn-info" data-bs-toggle="modal"  data-bs-target="#exampleModal" (click)="details(c)">Voir plus</button><br>
+
+                       
+                       <!--Swicher-->
 
                       </td>
                   
@@ -41,7 +46,7 @@
                 <!-- /.card-body -->
               </div>
               <!-- /.card -->
-
+              <pagination-controls (pageChange)="page = $event"></pagination-controls>
 
 
               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
