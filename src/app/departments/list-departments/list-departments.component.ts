@@ -33,8 +33,8 @@ export class ListDepartmentsComponent implements OnInit {
     )
   }
 
-   details(etud:any){
-    this.departmentData = etud;
+   details(departments:any){
+    this.departmentData = departments;
   }
 
   deleteDepartment(id:any){
