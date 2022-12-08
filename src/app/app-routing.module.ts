@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddEtudiantComponent } from './Etudiant/add-etudiant/add-etudiant.component';
+//import { AddEtudiantComponent } from './Etudiant/add-etudiant/add-etudiant.component';
 import { ContentComponent } from './content/content.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddDepartmentsComponent } from './departments/add-departments/add-departments.component';
@@ -30,7 +30,15 @@ const routes: Routes = [
     children:[
          { path:'list-etudiant',component: ListEtudiantComponent},
          { path:'list-contrat',component: ListContratComponent},
-         {path:'add-etudiant', component:AddEtudiantComponent},
+        // {path:'add-etudiant', component:AddEtudiantComponent},
+
+        { path:'add-etudiant', loadChildren:()=>import('./Etudiant/add-etudiant/add-etudiant.module').then(m=>m.AddEtudiantModule)},
+
+       // { path:'list-etudiant', loadChildren:()=>import('./Etudiant/list-etudiant/list-etudiant.module').then(m=>m.ListEtudiantModule)},
+
+
+      // { path:'update-etudiant/:id', loadChildren:()=>import('./Etudiant/update-etudiant/update-etudiant.module').then(m=>m.UpdateEtudiantModule)},
+
 
          {path:'profile', component:ProfileComponent},
 

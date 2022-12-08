@@ -13,15 +13,37 @@
           
             <!-- /.card-header -->
             <!-- form start -->
-            <form (ngSubmit)="addEtudiant()">
+            <form #formAddEtudiant="ngForm" (ngSubmit)="addEtudiant()">
               <div class="card-body">
                 <div class="form-group">
                   <label  for="exampleInputEmail1">Nom</label>
-                  <input [(ngModel)] = "etudiantData.nom" name="nom" type="text" class="form-control"  placeholder="Nom">
+                  <input [(ngModel)] = "etudiantData.nom" name="nom" type="text" class="form-control"  placeholder="Nom"
+                  required
+                  maxlength="20"
+                  #lastName = "ngModel"
+                  [ngClass]="{'is-invalid' : lastName.touched && !lastName.valid}">
+                  <div class="invalid-feedback">
+                    <span *ngIf="lastName.errors">
+                      Entrer un nom
+                    </span>
+                  </div>
                 </div>
                 <div class="form-group">
                   <label>Prénom</label>
-                  <input name="prenom" [(ngModel)] = "etudiantData.prenom"  type="text" class="form-control"  placeholder="Prénom">
+                  <input name="prenom" [(ngModel)] = "etudiantData.prenom"  type="text" class="form-control"  placeholder="Prénom"
+                  required
+                  maxlength="20"
+                  #firstName = "ngModel"
+                  [ngClass]="{'is-invalid' : firstName.touched && !firstName.valid}">
+                  <div class="invalid-feedback">
+                    <span *ngIf="lastName.errors?.['required']">
+                      Entrer un prénom
+                    </span>
+                    <span *ngIf="lastName.errors?.['maxlength']">
+                      Maximum 20 caractères
+                    </span>
+
+                  </div>
                 </div>
 
 
