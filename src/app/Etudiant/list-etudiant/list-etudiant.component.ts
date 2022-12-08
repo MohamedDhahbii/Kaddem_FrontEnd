@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { EtudiantService } from 'src/app/Services/etudiant.service';
 import { DepartmentsService } from 'src/app/Services/departments.service';
 import Swal from 'sweetalert2';
+import { Contrat } from 'src/app/Models/Contrat';
+import { ContratService } from 'src/app/Services/contrat.service';
+import { Router } from '@angular/router';
+import { Etudiant } from 'src/app/Models/Etudiant';
 @Component({
   selector: 'app-list-etudiant',
   templateUrl: './list-etudiant.component.html',
@@ -11,6 +15,7 @@ export class ListEtudiantComponent implements OnInit {
 
 
   etudiants : any=[];
+  contrat: Contrat = new Contrat();
 
   totalLength:any;
   page:number = 1;
@@ -34,7 +39,7 @@ export class ListEtudiantComponent implements OnInit {
 
 
 
-  constructor(private etudiant : EtudiantService, private dept : DepartmentsService) { }
+  constructor(private etudiant : EtudiantService, private dept : DepartmentsService, private contratService : ContratService, private router:Router) { }
 
   ngOnInit(): void {
     this.getListEtudiant();
@@ -61,6 +66,16 @@ export class ListEtudiantComponent implements OnInit {
 
   details(etud:any){
     this.etudiantData = etud;
+    this.contrat = new Contrat();
+    this.contratService.getContratByEtud(etud.id).subscribe(
+      (data)=>{
+        this.contrat = data;
+        console.log(this.contrat);
+      },
+      (error)=>{
+        console.log(error);
+      }
+    )
   }
 
 
@@ -99,6 +114,10 @@ export class ListEtudiantComponent implements OnInit {
 
       this.searchText = searchValue;
       console.log(this.searchText);
+    }
+
+    ajouterContrat(etud: any){
+      this.router.navigate([`/dashboard/add-contrat-to-etudiant/${etud}`]);
     }
 
 

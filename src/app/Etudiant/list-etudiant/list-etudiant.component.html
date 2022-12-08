@@ -75,6 +75,20 @@
                           <!--li class="list-group-item">{{etudiantData.departement}}</li-->
 
                         </ul>
+                        <div *ngIf="contrat.id">
+                          <div class="card-header">
+                            <p style="font-weight: bold;"> Contrat Actif:</p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">date debut : {{contrat.dateDebutContrat}}</li>
+                            <li class="list-group-item">date fin : {{contrat.dateFinContrat}}</li>
+                            <li class="list-group-item">montant : {{contrat.montantContrat}}</li>
+  
+                            <!--li class="list-group-item">{{etudiantData.departement}}</li-->
+  
+                          </ul>
+                        </div>
+                        
                       </div>
                     </div>
                   </div>

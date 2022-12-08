@@ -58,6 +58,10 @@ export class ContratService {
       return this.http.get(`${baseUrl}/contrat/${id}`);
   
     }
+
+    getContratByEtud(idE: any) {
+      return this.http.get(`${baseUrl}/contrat/getByetudiant/${idE}`);
+    }
   
 
 }
