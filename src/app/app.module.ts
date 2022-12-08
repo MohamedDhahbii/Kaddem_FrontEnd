@@ -38,6 +38,8 @@ import { DatePipe } from '@angular/common';
 
 import { NgxPaginationModule } from 'ngx-pagination';
 import { SearchComponent } from './search/search.component';
+import { AddEtudiantAssignEquipeDepartementComponent } from './etudiant/add-etudiant-assign-equipe-departement/add-etudiant-assign-equipe-departement.component';
+import { AddContratAssignEtudiantComponent } from './etudiant/add-contrat-assign-etudiant/add-contrat-assign-etudiant.component';
 
 
 
@@ -66,7 +68,9 @@ import { SearchComponent } from './search/search.component';
     AddContratComponent,
     ListContratComponent,
     ModifierContratComponent,
-    SearchComponent
+    SearchComponent,
+    AddEtudiantAssignEquipeDepartementComponent,
+    AddContratAssignEtudiantComponent
 
   ],
   imports: [

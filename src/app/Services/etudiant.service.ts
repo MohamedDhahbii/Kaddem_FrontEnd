@@ -27,7 +27,16 @@ export class EtudiantService {
   public addEtudiantAndAssignToEquipeContrat(etudiant:any, idE: number, idC: number){
 
     console.log(etudiant);
-    return this.http.post(`${baseUrl}/etudiant/add_etudiant/assign_equipe_contrat/${idE}/${idC}`,etudiant);
+    let url = `${baseUrl}/etudiant/add_etudiant/assign_equipe_ctr/${idE}/${idC}`;
+    console.log(url);
+    return this.http.post(url, etudiant);
+
+
+  }
+  public addAndAssignEtudiantToEquipeAndDepartement(etudiant:any, idE: any, idD: any){
+
+    console.log(etudiant);
+    return this.http.post(`${baseUrl}/etudiant/add_etudiant/assign_equipe_dep/${idE}/${idD}`,etudiant);
 
 
   }

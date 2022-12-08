@@ -1,0 +1,69 @@
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-11 container">
+                <!-- general form elements -->
+                <div class="card card-primary">
+
+                    {{etudiant|json}}
+                    <div style="background-color:#3498db;" class="card-header">
+                        <h3 class="card-title">departement: <strong>{{department.nomDepartment}}</strong> </h3>
+                    </div>
+
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form (ngSubmit)="addEtudiant()">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Nom</label>
+                                <input [(ngModel)]="etudiant.nom" name="nom" type="text" class="form-control"
+                                    placeholder="Nom">
+                            </div>
+                            <div class="form-group">
+                                <label>Prénom</label>
+                                <input name="prenom" [(ngModel)]="etudiant.prenom" type="text" class="form-control"
+                                    placeholder="Prénom">
+                            </div>
+
+
+                            <label>Options</label>
+                            <select name="options" class="form-select" aria-label="Default select example"
+                                [(ngModel)]="etudiant.opt">
+
+                                <option value="NIDS">NIDS</option>
+                                <option value="GAMIX">GAMIX</option>
+                                <option value="SE">SE</option>
+                                <option value="SIM">SIM</option>
+                            </select>
+
+
+
+                            <label>Equipe</label>
+                            <select name="equipe" class="form-select" aria-label="Default select example"
+                                [(ngModel)]="equipe1.id">
+
+                                <option *ngFor="let eq of equipes" [value]="eq.id">{{eq.nomEquipe}}</option>
+                            </select>
+
+
+
+
+
+                        </div>
+
+
+
+                        <!-- /.card-body -->
+
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

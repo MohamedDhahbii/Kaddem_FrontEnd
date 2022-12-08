@@ -28,7 +28,7 @@ export class AddEtudiantToEquipeContratComponent implements OnInit {
   addEtudiantToEquipe(){
     this.etudiant.addEtudiantAndAssignToEquipeContrat(this.etudiantData,1, 1).subscribe(
       (data:any)=>{
-        Swal.fire('Succé', 'Etudiant ajouté avec succé', 'success');
+        Swal.fire('Succés', 'Etudiant ajouté avec succés', 'success');
       },
       (error)=>{
         Swal.fire('Erreur !', 'Erreur de cette opération', 'error');

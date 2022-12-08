@@ -10,8 +10,13 @@ import Swal from 'sweetalert2';
 })
 export class ListEquipeComponent implements OnInit {
 
-  equipes : any=[];
+  equipes : Equipe[]=[];
   eq : Equipe = new Equipe();
+
+  totalLength:any;
+  page:number = 1;
+
+  searchText:string='';
 
   constructor(private equipeService : EquipeService) { }
 
@@ -19,10 +24,12 @@ export class ListEquipeComponent implements OnInit {
     this.getListEquipe();
   }
 
-  getListEquipe(){
+  getListEquipe (){
     this.equipeService.getEquipes().subscribe(
       (data:any)=>{
         this.equipes = data;
+
+        this.totalLength = data.length;
         console.log(this.equipes);
       },
       (error)=>{
@@ -60,5 +67,14 @@ export class ListEquipeComponent implements OnInit {
 
     details(equi:Equipe){
       this.eq = equi;
+    }
+
+    onSearchTextChanged(searchValue:string){
+
+      this.searchText = searchValue;
+      this.equipes = this.equipes.filter((obj:Equipe) => {
+        return obj.nomEquipe?.includes(searchValue);
+      })
+      console.log(this.equipes);
     }
 }

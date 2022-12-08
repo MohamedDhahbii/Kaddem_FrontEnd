@@ -23,6 +23,13 @@ export class ContratService {
   
   
     }
+  
+    public addContratAssignEtudiant(contrat:any, idE: number){
+  
+      return this.http.post(`${baseUrl}/contrat/addContrat/etudiant/${idE}`,contrat);
+  
+  
+    }
 
     getCountContrat(){
 

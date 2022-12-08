@@ -35,6 +35,7 @@
                         <button class="btn btn-danger" (click)="deleteEtudiant(e.id)">Supprimer</button>&nbsp;
                         <button class="btn btn-warning" [routerLink]="'/dashboard/update-etudiant/'+e.id" >Modifier</button>&nbsp;
                         <button class="btn btn-info" data-bs-toggle="modal"  data-bs-target="#exampleModal" (click)="details(e)">Voir plus</button>
+                        <button class="btn btn-primary" [routerLink]="'/dashboard/add-contrat-to-etudiant/'+e.id" >ajouter contrat</button>&nbsp;
 
                       </td>
                   
