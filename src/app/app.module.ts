@@ -22,7 +22,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ListEquipeComponent } from './equipe/list-equipe/list-equipe.component';
 import { AddEquipeComponent } from './equipe/add-equipe/add-equipe.component';
 import { UpdateEquipeComponent } from './equipe/update-equipe/update-equipe.component';
-import { AddEtudiantToEquipeContratComponent } from './etudiant/add-etudiant-to-equipe-contrat/add-etudiant-to-equipe-contrat.component';
+//import { AddEtudiantToEquipeContratComponent } from './etudiant/add-etudiant-to-equipe-contrat/add-etudiant-to-equipe-contrat.component';
 import { UpdateEtudiantComponent } from './Etudiant/update-etudiant/update-etudiant.component';
 
 import { ListDepartmentsComponent } from './departments/list-departments/list-departments.component';
@@ -57,14 +57,14 @@ import { SearchComponent } from './search/search.component';
     ListEquipeComponent,
     AddEquipeComponent,
     UpdateEquipeComponent,
-    AddEtudiantToEquipeContratComponent,
+   // AddEtudiantToEquipeContratComponent,
     ListDepartmentsComponent,
     AddDepartmentsComponent,
     DeleteDepartmentsComponent,
     UpdateDepartmentsComponent,
     UpdateEtudiantComponent,
     AddContratComponent,
-    ListContratComponent,
+    //ListContratComponent,
     ModifierContratComponent,
     SearchComponent,
 

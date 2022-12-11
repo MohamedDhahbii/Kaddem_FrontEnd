@@ -16,7 +16,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { UserGuard } from './Services/user.guard';
 
-import {AddEtudiantToEquipeContratComponent} from "./etudiant/add-etudiant-to-equipe-contrat/add-etudiant-to-equipe-contrat.component";
+//import {AddEtudiantToEquipeContratComponent} from "./etudiant/add-etudiant-to-equipe-contrat/add-etudiant-to-equipe-contrat.component";
 
 import { UpdateEtudiantComponent } from './Etudiant/update-etudiant/update-etudiant.component';
 import { UpdateEquipeComponent } from './equipe/update-equipe/update-equipe.component';
@@ -29,7 +29,8 @@ const routes: Routes = [
   {path : 'dashboard', component:DashboardComponent, canActivate:[UserGuard],
     children:[
          { path:'list-etudiant',component: ListEtudiantComponent},
-         { path:'list-contrat',component: ListContratComponent},
+       //  { path:'list-contrat',component: ListContratComponent},
+       {path:'list-contrat',loadChildren:()=>import('./contrat/list-contrat/list-contrat.module').then(m=>m.ListContratModule)},
          {path:'add-etudiant', component:AddEtudiantComponent},
 
          {path:'profile', component:ProfileComponent},
@@ -51,7 +52,7 @@ const routes: Routes = [
          { path:'update-equipe/:id', component:UpdateEquipeComponent},
          { path:'modifier-contrat/:id', component:ModifierContratComponent},
        //  {path:'add-etudiant', component:AddEtudiantComponent},
-         {path:'add-etudiant-to-equipe-contrat', component:AddEtudiantToEquipeContratComponent}
+        // {path:'add-etudiant-to-equipe-contrat', component:AddEtudiantToEquipeContratComponent}
         ]},
 
 

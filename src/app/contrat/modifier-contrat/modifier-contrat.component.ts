@@ -12,6 +12,7 @@ export class ModifierContratComponent implements OnInit {
   id=0;
   cntr:any;
   
+  
   constructor(private route:ActivatedRoute,private contrat : ContratService, private router : Router) { }
 
   ngOnInit(): void {
@@ -28,9 +29,10 @@ export class ModifierContratComponent implements OnInit {
     )
   }
 
-  updateData(){
+  updateData(f:any){
+
     // alert('clicked');
-    this.contrat.updateContrat(this.cntr).subscribe(
+    this.contrat.updateContrat(f).subscribe(
      (data)=>{
        Swal.fire('Success !!', 'Examen modifié avec succé', 'success').then((c)=>{
          this.router.navigate(['/dashboard/list-contrat']);

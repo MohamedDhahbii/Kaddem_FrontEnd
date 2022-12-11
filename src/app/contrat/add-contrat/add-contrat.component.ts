@@ -52,10 +52,11 @@ export class AddContratComponent implements OnInit {
     }
 
 
-    console.log(this.ContratData.dateDebutContrat);
+   // console.log(this.ContratData.dateDebutContrat);
 
     this.contrat.addContrat(this.ContratData).subscribe(
       (data:any)=>{
+        
         Swal.fire('Succé', 'contrat ajouté avec succé', 'success');
       },
       (error)=>{
