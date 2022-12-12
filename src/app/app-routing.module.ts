@@ -16,11 +16,15 @@ import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { UserGuard } from './Services/user.guard';
 
-import {AddEtudiantToEquipeContratComponent} from "./etudiant/add-etudiant-to-equipe-contrat/add-etudiant-to-equipe-contrat.component";
+//import {AddEtudiantToEquipeContratComponent} from "./etudiant/add-etudiant-to-equipe-contrat/add-etudiant-to-equipe-contrat.component";
 
 import { UpdateEtudiantComponent } from './Etudiant/update-etudiant/update-etudiant.component';
 import { UpdateEquipeComponent } from './equipe/update-equipe/update-equipe.component';
 import { ModifierContratComponent } from './contrat/modifier-contrat/modifier-contrat.component';
+import { ListDetailEquipeComponent } from './detailEquipe/list-detail-equipe/list-detail-equipe.component';
+import { AddDetailEquipeComponent } from './detailEquipe/add-detail-equipe/add-detail-equipe.component';
+import { UpdateDetailEquipeComponent } from './detailEquipe/update-detail-equipe/update-detail-equipe.component';
+//import { AddEtudiantToEquipeContratComponent } from './etudiant/add-etudiant-to-equipe-contrat/add-etudiant-to-equipe-contrat.component';
 
 
 const routes: Routes = [
@@ -55,11 +59,14 @@ const routes: Routes = [
 
 
          { path:'list-equipe',component: ListEquipeComponent},
+         { path:'list-detail-equipe',component: ListDetailEquipeComponent},
+         { path:'add-detail-equipe',component: AddDetailEquipeComponent},
+         { path:'update-detail-equipe/:id', component:UpdateDetailEquipeComponent},
         // { path:'add-equipe',component: AddEquipeComponent},
          { path:'update-equipe/:id', component:UpdateEquipeComponent},
-         { path:'modifier-contrat/:id', component:ModifierContratComponent},
+         { path:'modifier-contrat/:id', component:ModifierContratComponent}
        //  {path:'add-etudiant', component:AddEtudiantComponent},
-         {path:'add-etudiant-to-equipe-contrat', component:AddEtudiantToEquipeContratComponent}
+         //{path:'add-etudiant-to-equipe-contrat', component:AddEtudiantToEquipeContratComponent}
         ]},
 
 
