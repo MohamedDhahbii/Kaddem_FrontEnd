@@ -22,7 +22,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ListEquipeComponent } from './equipe/list-equipe/list-equipe.component';
 import { AddEquipeComponent } from './equipe/add-equipe/add-equipe.component';
 import { UpdateEquipeComponent } from './equipe/update-equipe/update-equipe.component';
-import { AddEtudiantToEquipeContratComponent } from './etudiant/add-etudiant-to-equipe-contrat/add-etudiant-to-equipe-contrat.component';
+//import { AddEtudiantToEquipeContratComponent } from './etudiant/add-etudiant-to-equipe-contrat/add-etudiant-to-equipe-contrat.component';
 import { UpdateEtudiantComponent } from './Etudiant/update-etudiant/update-etudiant.component';
 
 import { ListDepartmentsComponent } from './departments/list-departments/list-departments.component';
@@ -34,10 +34,16 @@ import { AddContratComponent } from './contrat/add-contrat/add-contrat.component
 import { ListContratComponent } from './contrat/list-contrat/list-contrat.component';
 import { ModifierContratComponent } from './contrat/modifier-contrat/modifier-contrat.component';
 
+
+
+
 import { DatePipe } from '@angular/common';
 
 import { NgxPaginationModule } from 'ngx-pagination';
 import { SearchComponent } from './search/search.component';
+import { AddDetailEquipeComponent } from './detailEquipe/add-detail-equipe/add-detail-equipe.component';
+import { ListDetailEquipeComponent } from './detailEquipe/list-detail-equipe/list-detail-equipe.component';
+import { UpdateDetailEquipeComponent } from './detailEquipe/update-detail-equipe/update-detail-equipe.component';
 
 
 
@@ -57,7 +63,7 @@ import { SearchComponent } from './search/search.component';
     ListEquipeComponent,
     AddEquipeComponent,
     UpdateEquipeComponent,
-    AddEtudiantToEquipeContratComponent,
+    //AddEtudiantToEquipeContratComponent,
     ListDepartmentsComponent,
     AddDepartmentsComponent,
     DeleteDepartmentsComponent,
@@ -67,6 +73,9 @@ import { SearchComponent } from './search/search.component';
     ListContratComponent,
     ModifierContratComponent,
     SearchComponent,
+    AddDetailEquipeComponent,
+    ListDetailEquipeComponent,
+    UpdateDetailEquipeComponent,
 
 
   ],
