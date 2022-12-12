@@ -16,7 +16,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { authInterceptorProviders } from './Services/auth.Interceptor';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { AddEtudiantComponent } from './Etudiant/add-etudiant/add-etudiant.component';
+//import { AddEtudiantComponent } from './Etudiant/add-etudiant/add-etudiant.component';
 import { ProfileComponent } from './profile/profile.component';
 
 import { ListEquipeComponent } from './equipe/list-equipe/list-equipe.component';
@@ -44,6 +44,11 @@ import { SearchComponent } from './search/search.component';
 import { AddDetailEquipeComponent } from './detailEquipe/add-detail-equipe/add-detail-equipe.component';
 import { ListDetailEquipeComponent } from './detailEquipe/list-detail-equipe/list-detail-equipe.component';
 import { UpdateDetailEquipeComponent } from './detailEquipe/update-detail-equipe/update-detail-equipe.component';
+import { AddEtudiantModule } from './Etudiant/add-etudiant/add-etudiant.module';
+import { ListEtudiantModule } from './Etudiant/list-etudiant/list-etudiant.module';
+import { UpdateEtudiantModule } from './Etudiant/update-etudiant/update-etudiant.module';
+//import { AddEtudiantModule } from './Modules/addEtudiant/add-etudiant/add-etudiant.module';
+
 
 
 
@@ -58,7 +63,7 @@ import { UpdateDetailEquipeComponent } from './detailEquipe/update-detail-equipe
     ListEtudiantComponent,
     DashboardComponent,
     SidebarComponent,
-    AddEtudiantComponent,
+   // AddEtudiantComponent,
     ProfileComponent,
     ListEquipeComponent,
     AddEquipeComponent,
@@ -87,7 +92,10 @@ import { UpdateDetailEquipeComponent } from './detailEquipe/update-detail-equipe
     BrowserAnimationsModule,
     MatSnackBarModule,
     NgxPaginationModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AddEtudiantModule,
+   // ListEtudiantModule,
+   //UpdateEtudiantModule,
   ],
   providers: [authInterceptorProviders, DatePipe],
   bootstrap: [AppComponent],

@@ -47,4 +47,14 @@ export class EquipeService {
 
 
 
+  getCountEquipe(){
+
+    return this.http.get(`${baseUrl}/equipe/count`);
+
+
+  }
+
+
+
+
 }
