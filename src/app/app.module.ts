@@ -39,8 +39,6 @@ import { DatePipe } from '@angular/common';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { SearchComponent } from './search/search.component';
 import { AddEtudiantModule } from './Etudiant/add-etudiant/add-etudiant.module';
-import { ListEtudiantModule } from './Etudiant/list-etudiant/list-etudiant.module';
-import { UpdateEtudiantModule } from './Etudiant/update-etudiant/update-etudiant.module';
 //import { AddEtudiantModule } from './Modules/addEtudiant/add-etudiant/add-etudiant.module';
 
 
@@ -84,7 +82,7 @@ import { UpdateEtudiantModule } from './Etudiant/update-etudiant/update-etudiant
     MatSnackBarModule,
     NgxPaginationModule,
     ReactiveFormsModule,
-    AddEtudiantModule,
+   // AddEtudiantModule,
    // ListEtudiantModule,
    //UpdateEtudiantModule,
   ],
