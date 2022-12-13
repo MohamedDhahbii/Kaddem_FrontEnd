@@ -45,6 +45,7 @@ import { AddDetailEquipeComponent } from './detailEquipe/add-detail-equipe/add-d
 import { ListDetailEquipeComponent } from './detailEquipe/list-detail-equipe/list-detail-equipe.component';
 import { UpdateDetailEquipeComponent } from './detailEquipe/update-detail-equipe/update-detail-equipe.component';
 import { AddEtudiantModule } from './Etudiant/add-etudiant/add-etudiant.module';
+import { StatsComponent } from './stats/stats.component';
 //import { AddEtudiantModule } from './Modules/addEtudiant/add-etudiant/add-etudiant.module';
 
 
@@ -79,6 +80,7 @@ import { AddEtudiantModule } from './Etudiant/add-etudiant/add-etudiant.module';
     AddDetailEquipeComponent,
     ListDetailEquipeComponent,
     UpdateDetailEquipeComponent,
+    StatsComponent,
 
 
   ],
