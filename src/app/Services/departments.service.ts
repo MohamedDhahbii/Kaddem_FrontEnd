@@ -41,4 +41,16 @@ export class DepartmentsService {
     return this.http.get(`${baseUrl}/departement/${id}`);
 
   }
+
+
+  getCountDept(){
+
+    return this.http.get(`${baseUrl}/departement/count`);
+
+
+  }
+
+
+
+
 }

@@ -2,7 +2,7 @@ import { DetailsEquipe } from "./DetailsEquipe";
 
 export class Equipe{
     id?:number;
-    nomEquipe?:string;
+    nomEquipe?:any;
     niveau?:string;
     detailEquipe?:DetailsEquipe
   }

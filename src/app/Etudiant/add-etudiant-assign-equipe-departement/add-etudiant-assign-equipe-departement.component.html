@@ -19,7 +19,11 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Nom</label>
                                 <input [(ngModel)]="etudiant.nom" name="nom" type="text" class="form-control"
-                                    placeholder="Nom">
+                                    placeholder="Nom"
+                                    required
+                                    maxlength="20"
+                                    #lastName = "ngModel"
+                                    [ngClass]="{'is-invalid' : lastName.touched && !lastName.valid}">
                             </div>
                             <div class="form-group">
                                 <label>Prénom</label>

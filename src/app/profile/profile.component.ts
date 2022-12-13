@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { EtudiantService } from '../Services/etudiant.service';
 import Swal from 'sweetalert2';
+import { LoginService } from '../Services/login.service';
+import { EquipeService } from '../Services/equipe-service';
+import { DepartmentsService } from '../Services/departments.service';
 
 @Component({
   selector: 'app-profile',
@@ -11,11 +14,23 @@ export class ProfileComponent implements OnInit {
 
 
   nbEtudiant !:number;
+  nbEquipe !:number;
+  nbDept !:number;
 
-  constructor(private etudiant : EtudiantService) { }
+
+
+  user :any = null;
+
+  constructor(private etudiant : EtudiantService, private login: LoginService, private equipe : EquipeService
+    
+    , private dept : DepartmentsService) { }
 
   ngOnInit(): void {
-    // this.countEtudiant();
+     this.countEtudiant();
+     this.countEquipe();
+     this.countDept();
+
+    this.user = this.login.getUser();
   }
 
 
@@ -34,7 +49,32 @@ export class ProfileComponent implements OnInit {
   };
 
 
+  countEquipe(){
+    this.equipe.getCountEquipe().subscribe(
+      (data:any)=>{
+        this.nbEquipe = data;
+       
+      },
+      (error)=>{
+        console.log(error);
+        Swal.fire('Erreur !!', 'Erreur dans la récupération des deonnées', 'error');
+      }
+    )
+  };
 
 
+
+  countDept(){
+    this.dept.getCountDept().subscribe(
+      (data:any)=>{
+        this.nbDept = data;
+
+      },
+      (error)=>{
+        console.log(error);
+        Swal.fire('Erreur !!', 'Erreur dans la récupération des deonnées', 'error');
+      }
+    )
+  };
 
 }

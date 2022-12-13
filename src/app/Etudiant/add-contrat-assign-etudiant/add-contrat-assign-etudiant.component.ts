@@ -15,6 +15,8 @@ export class AddContratAssignEtudiantComponent implements OnInit {
   idE = 0;
   contrat: Contrat = new Contrat();
   etudiant: Etudiant = new Etudiant();
+  min = 100;
+  max = 99999;
   constructor(private route:ActivatedRoute, private contratService:ContratService, private etudiantService:EtudiantService, private router : Router) { }
 
   
@@ -35,8 +37,10 @@ export class AddContratAssignEtudiantComponent implements OnInit {
 
 
   
-  addContrat(){
-
+  addContrat(f:any){
+    console.log(f);
+    let ctr:Contrat;
+    ctr = f;
     this.contratService.addContratAssignEtudiant(this.contrat, Number(this.idE)).subscribe(
       (data:any)=>{
         console.log(data)

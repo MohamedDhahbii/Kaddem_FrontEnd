@@ -16,7 +16,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { authInterceptorProviders } from './Services/auth.Interceptor';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { AddEtudiantComponent } from './etudiant/add-etudiant/add-etudiant.component';
+//import { AddEtudiantComponent } from './Etudiant/add-etudiant/add-etudiant.component';
 import { ProfileComponent } from './profile/profile.component';
 
 import { ListEquipeComponent } from './equipe/list-equipe/list-equipe.component';
@@ -40,6 +40,11 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { SearchComponent } from './search/search.component';
 import { AddEtudiantAssignEquipeDepartementComponent } from './etudiant/add-etudiant-assign-equipe-departement/add-etudiant-assign-equipe-departement.component';
 import { AddContratAssignEtudiantComponent } from './etudiant/add-contrat-assign-etudiant/add-contrat-assign-etudiant.component';
+import { AddEtudiantModule } from './etudiant/add-etudiant/add-etudiant.module';
+import { ListEtudiantModule } from './etudiant/list-etudiant/list-etudiant.module';
+import { UpdateEtudiantModule } from './etudiant/update-etudiant/update-etudiant.module';
+//import { AddEtudiantModule } from './Modules/addEtudiant/add-etudiant/add-etudiant.module';
+
 
 
 
@@ -54,10 +59,10 @@ import { AddContratAssignEtudiantComponent } from './etudiant/add-contrat-assign
     ListEtudiantComponent,
     DashboardComponent,
     SidebarComponent,
-    AddEtudiantComponent,
+   // AddEtudiantComponent,
     ProfileComponent,
     ListEquipeComponent,
-    AddEquipeComponent,
+    // AddEquipeComponent,
     UpdateEquipeComponent,
     AddEtudiantToEquipeContratComponent,
     ListDepartmentsComponent,
@@ -81,7 +86,10 @@ import { AddContratAssignEtudiantComponent } from './etudiant/add-contrat-assign
     BrowserAnimationsModule,
     MatSnackBarModule,
     NgxPaginationModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AddEtudiantModule,
+   // ListEtudiantModule,
+   //UpdateEtudiantModule,
   ],
   providers: [authInterceptorProviders, DatePipe],
   bootstrap: [AppComponent],

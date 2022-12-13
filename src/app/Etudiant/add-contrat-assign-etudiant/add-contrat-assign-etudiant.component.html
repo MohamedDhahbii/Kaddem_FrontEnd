@@ -13,34 +13,68 @@
 
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form (ngSubmit)="addContrat()">
+                    <form #formAddContrat="ngForm" (ngSubmit)="addContrat(formAddContrat.value)">
                         <div class="card-body">
                             <div class="form-group">
                                 <label>date Debut Contrat</label>
                                 <input [(ngModel)]="contrat.dateDebutContrat" type="date" class="form-control"
-                                    ngbDatePicker="#dd" name="dateDebutContrat" placeholder="date Debut Contrat">
+                                    ngbDatePicker="#dd" name="dateDebutContrat" placeholder="date Debut Contrat"
+                                    required #dateDeb="ngModel"
+                                    [ngClass]="{'is-invalid' : dateDeb.touched && !dateDeb.valid}">
+                                <div class="invalid-feedback">
+                                    <span *ngIf="dateDeb.errors?.['required']">
+                                        Entrer un date de debut
+                                    </span>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label>date Fin Contrat</label>
                                 <input name="dateFinContrat" [(ngModel)]="contrat.dateFinContrat" type="date"
-                                    class="form-control" placeholder="date Fin Contrat">
+                                    class="form-control" placeholder="date Fin Contrat"
+                                    required #dateFin="ngModel"
+                                    [ngClass]="{'is-invalid' : dateFin.touched && !dateFin.valid}">
+                                <div class="invalid-feedback">
+                                    <span *ngIf="dateFin.errors?.['required']">
+                                        Entrer un date de debut
+                                    </span>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label>montant contrat</label>
                                 <input name="montantContrat" [(ngModel)]="contrat.montantContrat" type="number"
-                                    class="form-control" placeholder="montant contrat">
+                                    class="form-control" placeholder="montant contrat" required [max]="99999" [min]="100"
+                                    #montant="ngModel" [ngClass]="{'is-invalid' : montant.touched && !montant.valid}">
+                                <div class="invalid-feedback">
+                                    <span *ngIf="montant.errors?.['required']">
+                                        Entrer un montant
+                                    </span>
+                                    <span *ngIf="montant.errors?.['min']">
+                                        le min est de montant est {{min}}
+                                    </span>
+                                    <span *ngIf="montant.errors?.['max']">
+                                        le max est de montant est {{max}}
+                                    </span>
+                                </div>
                             </div>
 
 
-                            <label>specialite</label>
+                            <label>specialitée</label>
                             <select name="specialite" class="form-select" aria-label="Default select example"
-                                [(ngModel)]="contrat.specialite">
+                                [(ngModel)]="contrat.specialite"
+                                required #specialite="ngModel"
+                                [ngClass]="{'is-invalid' : specialite.touched && !specialite.valid}">
 
                                 <option value="IA">IA</option>
                                 <option value="RESEAU">RESEAU</option>
                                 <option value="CLOUD">CLOUD</option>
                                 <option value="SECURITE">SECURITE</option>
                             </select>
+                            
+                            <div class="invalid-feedback">
+                                <span *ngIf="dateFin.errors?.['required']">
+                                    Choisir une specialitée
+                                </span>
+                            </div>
 
 
 
@@ -54,7 +88,8 @@
                         <!-- /.card-body -->
 
                         <div class="card-footer">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary"
+                                [disabled]="formAddContrat.invalid">Submit</button>
 
                         </div>
                     </form>

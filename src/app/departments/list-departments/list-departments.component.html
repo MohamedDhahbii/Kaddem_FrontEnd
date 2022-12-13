@@ -19,11 +19,11 @@
                   <tr>
                     <td>{{d.id}}</td>
                     <td>{{d.nomDepartment}}</td>                   
-                    <td class="col-4">
+                    <td class="col-5">
                       <button class="btn btn-danger" (click)="deleteDepartment(d.id)">Supprimer</button>&nbsp;
                       <button class="btn btn-warning" [routerLink]="'/dashboard/update-department/'+d.id" >Modifier</button>&nbsp;
                       <button class="btn btn-info" data-bs-toggle="modal"  data-bs-target="#exampleModal" (click)="details(d)">Voir plus</button>
-                      <button class="btn btn-default" [routerLink]="'/dashboard/add-etudiant-assign-equipe-department/'+d.id" >Modifier</button>&nbsp;
+                      <button class="btn btn-default" [routerLink]="'/dashboard/add-etudiant-assign-equipe-department/'+d.id" >ajouter etudiant</button>&nbsp;
                     </td>
                 
                   </tr>

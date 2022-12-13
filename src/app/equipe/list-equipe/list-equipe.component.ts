@@ -72,9 +72,6 @@ export class ListEquipeComponent implements OnInit {
     onSearchTextChanged(searchValue:string){
 
       this.searchText = searchValue;
-      this.equipes = this.equipes.filter((obj:Equipe) => {
-        return obj.nomEquipe?.includes(searchValue);
-      })
       console.log(this.equipes);
     }
 }

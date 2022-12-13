@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddEtudiantComponent } from './etudiant/add-etudiant/add-etudiant.component';
+//import { AddEtudiantComponent } from './Etudiant/add-etudiant/add-etudiant.component';
 import { ContentComponent } from './content/content.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddDepartmentsComponent } from './departments/add-departments/add-departments.component';
@@ -22,6 +22,7 @@ import { UpdateEtudiantComponent } from './etudiant/update-etudiant/update-etudi
 import { UpdateEquipeComponent } from './equipe/update-equipe/update-equipe.component';
 import { AddEtudiantAssignEquipeDepartementComponent } from './etudiant/add-etudiant-assign-equipe-departement/add-etudiant-assign-equipe-departement.component';
 import { AddContratAssignEtudiantComponent } from './etudiant/add-contrat-assign-etudiant/add-contrat-assign-etudiant.component';
+import { ModifierContratComponent } from './contrat/modifier-contrat/modifier-contrat.component';
 
 
 const routes: Routes = [
@@ -31,13 +32,20 @@ const routes: Routes = [
     children:[
          { path:'list-etudiant',component: ListEtudiantComponent},
          { path:'list-contrat',component: ListContratComponent},
-         {path:'add-etudiant', component:AddEtudiantComponent},
+        // {path:'add-etudiant', component:AddEtudiantComponent},
 
+        { path:'add-etudiant', loadChildren:()=>import('./etudiant/add-etudiant/add-etudiant.module').then(m=>m.AddEtudiantModule)},
+
+       // { path:'list-etudiant', loadChildren:()=>import('./Etudiant/list-etudiant/list-etudiant.module').then(m=>m.ListEtudiantModule)},
+
+
+      // { path:'update-etudiant/:id', loadChildren:()=>import('./Etudiant/update-etudiant/update-etudiant.module').then(m=>m.UpdateEtudiantModule)},
+
+        { path:'add-equipe', loadChildren:()=>import('./equipe/add-equipe/add-equipe.module').then(m=>m.AddEquipeModule)},
          {path:'profile', component:ProfileComponent},
 
          { path:'list-equipe',component: ListEquipeComponent},
          { path:'add-equipe',component: AddEquipeComponent},
-         {path:'add-etudiant', component:AddEtudiantComponent},
          { path:'add-department',component: AddDepartmentsComponent},
          {path:'list-department', component:ListDepartmentsComponent},
          { path:'update-department/:id', component:UpdateDepartmentsComponent},
@@ -48,11 +56,11 @@ const routes: Routes = [
 
 
          { path:'list-equipe',component: ListEquipeComponent},
-         { path:'add-equipe',component: AddEquipeComponent},
          { path:'update-equipe/:id', component:UpdateEquipeComponent},
          {path:'add-etudiant-assign-equipe-department/:idD', component:AddEtudiantAssignEquipeDepartementComponent},
          {path:'add-etudiant-to-equipe-contrat', component:AddEtudiantToEquipeContratComponent},
-         {path:'add-contrat-to-etudiant/:idE', component:AddContratAssignEtudiantComponent}
+         {path:'add-contrat-to-etudiant/:idE', component:AddContratAssignEtudiantComponent},
+         { path:'modifier-contrat/:id', component:ModifierContratComponent}
         ]},
 
 
