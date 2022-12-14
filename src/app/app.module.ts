@@ -16,7 +16,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { authInterceptorProviders } from './Services/auth.Interceptor';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { AddEtudiantComponent } from './Etudiant/add-etudiant/add-etudiant.component';
+//import { AddEtudiantComponent } from './Etudiant/add-etudiant/add-etudiant.component';>>>>>>> master
 import { ProfileComponent } from './profile/profile.component';
 
 import { ListEquipeComponent } from './equipe/list-equipe/list-equipe.component';
@@ -34,10 +34,20 @@ import { AddContratComponent } from './contrat/add-contrat/add-contrat.component
 import { ListContratComponent } from './contrat/list-contrat/list-contrat.component';
 import { ModifierContratComponent } from './contrat/modifier-contrat/modifier-contrat.component';
 
+
+
+
 import { DatePipe } from '@angular/common';
 
 import { NgxPaginationModule } from 'ngx-pagination';
 import { SearchComponent } from './search/search.component';
+import { AddDetailEquipeComponent } from './detailEquipe/add-detail-equipe/add-detail-equipe.component';
+import { ListDetailEquipeComponent } from './detailEquipe/list-detail-equipe/list-detail-equipe.component';
+import { UpdateDetailEquipeComponent } from './detailEquipe/update-detail-equipe/update-detail-equipe.component';
+import { AddEtudiantModule } from './Etudiant/add-etudiant/add-etudiant.module';
+import { StatsComponent } from './stats/stats.component';
+//import { AddEtudiantModule } from './Modules/addEtudiant/add-etudiant/add-etudiant.module';
+
 
 
 
@@ -52,12 +62,16 @@ import { SearchComponent } from './search/search.component';
     ListEtudiantComponent,
     DashboardComponent,
     SidebarComponent,
-    AddEtudiantComponent,
+   // AddEtudiantComponent,
     ProfileComponent,
     ListEquipeComponent,
     AddEquipeComponent,
     UpdateEquipeComponent,
+
    // AddEtudiantToEquipeContratComponent,
+
+    //AddEtudiantToEquipeContratComponent,
+
     ListDepartmentsComponent,
     AddDepartmentsComponent,
     DeleteDepartmentsComponent,
@@ -67,6 +81,10 @@ import { SearchComponent } from './search/search.component';
     //ListContratComponent,
     ModifierContratComponent,
     SearchComponent,
+    AddDetailEquipeComponent,
+    ListDetailEquipeComponent,
+    UpdateDetailEquipeComponent,
+    StatsComponent,
 
 
   ],
@@ -78,7 +96,10 @@ import { SearchComponent } from './search/search.component';
     BrowserAnimationsModule,
     MatSnackBarModule,
     NgxPaginationModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+   // AddEtudiantModule,
+   // ListEtudiantModule,
+   //UpdateEtudiantModule,
   ],
   providers: [authInterceptorProviders, DatePipe],
   bootstrap: [AppComponent],
