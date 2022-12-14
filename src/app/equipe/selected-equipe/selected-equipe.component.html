@@ -1,0 +1,9 @@
+
+<div *ngIf="equipe.id" class="equipe">
+    <h3>nom d'équipe: <strong>{{equipe.nomEquipe}} </strong></h3>
+    <h3>Niveau d'équipe: <strong [ngStyle]="{color: equipe.niveau=='EXPERT' ? '#71BC75': equipe.niveau=='SENIOR' ? 'tomato' : '#550F00' }">{{equipe.niveau}} </strong></h3>
+    <div *ngIf="equipe.detailEquipe" class = "detail_equipe">
+        <h4>Nombre des salles : {{equipe.detailEquipe.salle}}</h4>
+        <h4>thématique : {{equipe.detailEquipe.thematique}}</h4>
+    </div>
+</div>

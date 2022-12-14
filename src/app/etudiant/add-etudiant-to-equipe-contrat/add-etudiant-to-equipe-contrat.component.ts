@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {EtudiantService} from "../../Services/etudiant.service";
 import Swal from "sweetalert2";
+import { Etudiant } from 'src/app/Models/Etudiant';
 
 @Component({
   selector: 'app-add-etudiant-to-equipe-contrat',
@@ -14,6 +15,7 @@ export class AddEtudiantToEquipeContratComponent implements OnInit {
     prenom:'',
     opt:''
   };
+  etud : Etudiant = new Etudiant();
 
 
 
@@ -26,7 +28,7 @@ export class AddEtudiantToEquipeContratComponent implements OnInit {
 
 
   addEtudiantToEquipe(){
-    this.etudiant.addEtudiantAndAssignToEquipeContrat(this.etudiantData,1, 1).subscribe(
+    this.etudiant.addEtudiantAndAssignToEquipeContrat(this.etud,1, 1).subscribe(
       (data:any)=>{
         Swal.fire('Succés', 'Etudiant ajouté avec succés', 'success');
       },

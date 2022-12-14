@@ -17,6 +17,8 @@ export class ProfileComponent implements OnInit {
   nbEquipe !:number;
   nbDept !:number;
 
+  
+
 
 
   user :any = null;

@@ -20,7 +20,8 @@
                                 totalItems:totalLength  
                                }"
                                >
-                                <tr *ngIf="searchText === '' || e.nomEquipe.toLowerCase().includes(searchText)">
+                                <tr *ngIf="searchText === '' || e.nomEquipe.toLowerCase().includes(searchText)"
+                                    (click)="select_equipe(e)">
                                     <td>
                                         {{e.nomEquipe}}
                                     </td>
@@ -87,7 +88,7 @@
                     </div>
                 </div>
             </div>
-
+            <app-selected-equipe [equipe]="selected_equipe"></app-selected-equipe>
         </div>
     </div>
 </section>

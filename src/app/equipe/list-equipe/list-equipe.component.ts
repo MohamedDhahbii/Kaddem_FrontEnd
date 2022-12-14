@@ -12,6 +12,7 @@ export class ListEquipeComponent implements OnInit {
 
   equipes : Equipe[]=[];
   eq : Equipe = new Equipe();
+  selected_equipe : Equipe = new Equipe();
 
   totalLength:any;
   page:number = 1;
@@ -70,8 +71,11 @@ export class ListEquipeComponent implements OnInit {
     }
 
     onSearchTextChanged(searchValue:string){
-
+      this.selected_equipe = new Equipe();
       this.searchText = searchValue;
       console.log(this.equipes);
+    }
+    select_equipe(equipe : Equipe){
+      this.selected_equipe = equipe;
     }
 }

@@ -24,6 +24,7 @@ import { AddEquipeComponent } from './equipe/add-equipe/add-equipe.component';
 import { UpdateEquipeComponent } from './equipe/update-equipe/update-equipe.component';
 import { AddEtudiantToEquipeContratComponent } from './etudiant/add-etudiant-to-equipe-contrat/add-etudiant-to-equipe-contrat.component';
 import { UpdateEtudiantComponent } from './etudiant/update-etudiant/update-etudiant.component';
+//import { AddEtudiantToEquipeContratComponent } from './etudiant/add-etudiant-to-equipe-contrat/add-etudiant-to-equipe-contrat.component';
 
 import { ListDepartmentsComponent } from './departments/list-departments/list-departments.component';
 import { AddDepartmentsComponent } from './departments/add-departments/add-departments.component';
@@ -34,15 +35,21 @@ import { AddContratComponent } from './contrat/add-contrat/add-contrat.component
 import { ListContratComponent } from './contrat/list-contrat/list-contrat.component';
 import { ModifierContratComponent } from './contrat/modifier-contrat/modifier-contrat.component';
 
+
+
+
 import { DatePipe } from '@angular/common';
 
 import { NgxPaginationModule } from 'ngx-pagination';
 import { SearchComponent } from './search/search.component';
 import { AddEtudiantAssignEquipeDepartementComponent } from './etudiant/add-etudiant-assign-equipe-departement/add-etudiant-assign-equipe-departement.component';
 import { AddContratAssignEtudiantComponent } from './etudiant/add-contrat-assign-etudiant/add-contrat-assign-etudiant.component';
+import { AddDetailEquipeComponent } from './detailEquipe/add-detail-equipe/add-detail-equipe.component';
+import { ListDetailEquipeComponent } from './detailEquipe/list-detail-equipe/list-detail-equipe.component';
+import { UpdateDetailEquipeComponent } from './detailEquipe/update-detail-equipe/update-detail-equipe.component';
 import { AddEtudiantModule } from './etudiant/add-etudiant/add-etudiant.module';
-import { ListEtudiantModule } from './etudiant/list-etudiant/list-etudiant.module';
-import { UpdateEtudiantModule } from './etudiant/update-etudiant/update-etudiant.module';
+import { StatsComponent } from './stats/stats.component';
+import { SelectedEquipeComponent } from './equipe/selected-equipe/selected-equipe.component';
 //import { AddEtudiantModule } from './Modules/addEtudiant/add-etudiant/add-etudiant.module';
 
 
@@ -64,7 +71,7 @@ import { UpdateEtudiantModule } from './etudiant/update-etudiant/update-etudiant
     ListEquipeComponent,
     // AddEquipeComponent,
     UpdateEquipeComponent,
-    AddEtudiantToEquipeContratComponent,
+    //AddEtudiantToEquipeContratComponent,
     ListDepartmentsComponent,
     AddDepartmentsComponent,
     DeleteDepartmentsComponent,
@@ -75,7 +82,13 @@ import { UpdateEtudiantModule } from './etudiant/update-etudiant/update-etudiant
     ModifierContratComponent,
     SearchComponent,
     AddEtudiantAssignEquipeDepartementComponent,
-    AddContratAssignEtudiantComponent
+    AddEtudiantToEquipeContratComponent,
+    AddContratAssignEtudiantComponent,
+    AddDetailEquipeComponent,
+    ListDetailEquipeComponent,
+    UpdateDetailEquipeComponent,
+    StatsComponent,
+    SelectedEquipeComponent,
 
   ],
   imports: [
@@ -87,7 +100,7 @@ import { UpdateEtudiantModule } from './etudiant/update-etudiant/update-etudiant
     MatSnackBarModule,
     NgxPaginationModule,
     ReactiveFormsModule,
-    AddEtudiantModule,
+   // AddEtudiantModule,
    // ListEtudiantModule,
    //UpdateEtudiantModule,
   ],

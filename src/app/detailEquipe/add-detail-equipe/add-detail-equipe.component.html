@@ -1,0 +1,40 @@
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-11 container">
+          <!-- general form elements -->
+          <div  class="card card-primary">
+            {{DetailEquipeData|json}}
+            <div style="background-color:#3498db;" class="card-header">
+              <h3 class="card-title">Quick Example</h3>
+            </div>
+          
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form (ngSubmit)="addDetailEquipe()">
+              <div class="card-body">
+                <div class="form-group">
+                  <label  for="exampleInputEmail1">Salle</label>
+                  <input [(ngModel)] = "DetailEquipeData.salle" name="salle" type="text" class="form-control"  placeholder="salle">
+                </div>
+                <div class="form-group">
+                    <label  for="exampleInputEmail1">Thematique</label>
+                    <input [(ngModel)] = "DetailEquipeData.thematique" name="thematique" type="text" class="form-control"  placeholder="thematique">
+                  </div>           
+              </div>
+              <!-- /.card-body -->
+             
+              <div class="card-footer">
+                <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                <button mat-raised-button color="primary" id="submit-btn"
+                (mouseover)="onmouseOver()">Submit</button>
+                
+              </div>
+              
+            </form>
+          </div>
+
+
+        
