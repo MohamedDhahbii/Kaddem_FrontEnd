@@ -6,7 +6,6 @@
         <div class="col-md-11 container">
           <!-- general form elements -->
           <div  class="card card-primary">
-            {{departmentData|json}}
             <div style="background-color:#3498db;" class="card-header">
               <h3 class="card-title">Quick Example</h3>
             </div>
@@ -17,11 +16,43 @@
               <div class="card-body">
                 <div class="form-group">
                   <label  for="exampleInputEmail1">Nom Department</label>
-                  <input [(ngModel)] = "departmentData.nomDepartment" name="nom" type="text" class="form-control"  placeholder="Nom department">
+                  <input [(ngModel)] = "departmentData.nomDepartment" name="nom" type="text" class="form-control"  placeholder="Nom department"
+                  required
+                  maxlength="10"
+                  #nameD = "ngModel"
+                  [ngClass]="{'is-invalid' : nameD.touched && !nameD.valid}">
+                  <div class="invalid-feedback">
+                    <span *ngIf="nameD.errors">
+                      Entrer un nom
+                    </span>
+                  </div>
                   <label  for="exampleInputEmail1">Chef Department</label>
-                  <input [(ngModel)] = "departmentData.chefDepartment" name="chef" type="text" class="form-control"  placeholder="Chef department">
+                  <input [(ngModel)] = "departmentData.chefDepartment" name="chef" type="text" class="form-control"  placeholder="Chef department"
+                  required
+                  maxlength="8"
+                  #chefD = "ngModel"
+                  [ngClass]="{'is-invalid' : chefD.touched && !chefD.valid}">
+                  <div class="invalid-feedback">
+                    <span *ngIf="chefD.errors">
+                      Entrer un prenom du chef department
+                    </span>
+                  </div>
                   <label  for="exampleInputEmail1">Nombre des salles </label>
-                  <input [(ngModel)] = "departmentData.nombreSalle" name="nb" type="text" class="form-control"  placeholder="Nombre des salle">
+                  <input [(ngModel)] = "departmentData.nombreSalle" name="nb" type="text" class="form-control"  placeholder="Nombre des salle"
+                  required
+                  maxlength="5"
+                  #salle = "ngModel"
+                  [ngClass]="{'is-invalid' : salle.touched && !salle.valid}">
+                  <div class="invalid-feedback">
+                    <span *ngIf="salle.errors?.['required']">
+                      Entrer un nombre
+                    </span>
+                    <span *ngIf="salle.errors?.['maxlength']">
+                      Maximum 5 caractères
+                    </span>
+
+                  </div>
+              
                 </div>          
               </div>
               <!-- /.card-body -->

@@ -6,14 +6,13 @@
         <div class="col-md-11 container">
           <!-- general form elements -->
           <div  class="card card-primary">
-            {{universiteData|json}}
             <div style="background-color:#3498db;" class="card-header">
               <h3 class="card-title">Quick Example</h3>
             </div>
           
             <!-- /.card-header -->
             <!-- form start -->
-            <form (ngSubmit)="updateData()">
+            <form #form="ngForm" (ngSubmit)="updateData(form.value)">
               <div class="card-body">
                 <div class="form-group">
                   <label  for="exampleInputEmail1">Nom universite</label>

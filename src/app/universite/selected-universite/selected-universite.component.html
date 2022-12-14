@@ -1,0 +1,12 @@
+<div *ngIf="universite.id" class="universite">
+    <h3>nom universite: <strong [ngStyle]="{color: universite.nomUniversite =='Esprit' ? 'tomato':'black' }">{{universite.nomUniversite}} </strong></h3>
+    <div *ngIf="universite.dept">
+        <h3>Nom departments:</h3>
+        <ul *ngFor="let d of universite.dept">
+            <li>
+                {{d.nomDepartment}}
+            </li>
+        </ul>
+        
+    </div>
+</div>

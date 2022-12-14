@@ -10,19 +10,20 @@
                   <table id="example2" class="table table-bordered table-hover">
                     <thead>
                     <tr>
-                      <th>ID</th>
-                      <th>Nom universite</th>
+                      <th >Universite id</th>
+                      <th (click) = "sort('nomUniversite')">Nom universite&nbsp;<i class="fa fa-sort"></i></th>
                       <th>Localisation</th>
                       <th>Region</th>
                       <th>Actions</th>
                     </tr>
                     </thead>
-                    <tbody *ngFor ="let u of universites | paginate : {itemsPerPage:5,
+                    <tbody *ngFor ="let u of universites | orderBy: key: reverse  | paginate : {itemsPerPage:5
+                      ,
                       currentPage:page,
                       totalItems:totalLength  
                      }" 
                     >
-                    <tr>
+                    <tr (click)="selectUniversite(u)">
                       <td>{{u.id}}</td>
                       <td>{{u.nomUniversite}}</td>   
                       <td>{{u.localisation}}</td> 
@@ -44,9 +45,9 @@
               <!-- /.card -->
               <pagination-controls (pageChange)="page = $event"></pagination-controls>
               <a routerLink="/dashboard/add-universite" class="btn btn-primary">ajouter universite</a>
+              <br><br><br>
   
-  
-  
+
               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
@@ -76,3 +77,8 @@
                   </div>
                 </div>
               </div>
+              <app-selected-universite [universite]="uni"></app-selected-universite>
+              </div>
+          </div>
+          </div>
+          </section>

@@ -22,7 +22,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ListEquipeComponent } from './equipe/list-equipe/list-equipe.component';
 import { AddEquipeComponent } from './equipe/add-equipe/add-equipe.component';
 import { UpdateEquipeComponent } from './equipe/update-equipe/update-equipe.component';
-import { AddEtudiantToEquipeContratComponent } from './etudiant/add-etudiant-to-equipe-contrat/add-etudiant-to-equipe-contrat.component';
+//import { AddEtudiantToEquipeContratComponent } from './etudiant/add-etudiant-to-equipe-contrat/add-etudiant-to-equipe-contrat.component';
 import { UpdateEtudiantComponent } from './Etudiant/update-etudiant/update-etudiant.component';
 
 import { ListDepartmentsComponent } from './departments/list-departments/list-departments.component';
@@ -41,6 +41,8 @@ import { SearchComponent } from './search/search.component';
 import { AddUniversiteComponent } from './universite/add-universite/add-universite.component';
 import { ListUniversiteComponent } from './universite/list-universite/list-universite.component';
 import { UpdateUniversiteComponent } from './universite/update-universite/update-universite.component';
+import { Ng2OrderModule } from 'ng2-order-pipe';
+import { SelectedUniversiteComponent } from './universite/selected-universite/selected-universite.component';
 
 
 
@@ -60,9 +62,9 @@ import { UpdateUniversiteComponent } from './universite/update-universite/update
     ListEquipeComponent,
     AddEquipeComponent,
     UpdateEquipeComponent,
-    AddEtudiantToEquipeContratComponent,
+    //AddEtudiantToEquipeContratComponent,
     ListDepartmentsComponent,
-    AddDepartmentsComponent,
+    //AddDepartmentsComponent,
     DeleteDepartmentsComponent,
     UpdateDepartmentsComponent,
     UpdateEtudiantComponent,
@@ -73,6 +75,7 @@ import { UpdateUniversiteComponent } from './universite/update-universite/update
     AddUniversiteComponent,
     ListUniversiteComponent,
     UpdateUniversiteComponent,
+    SelectedUniversiteComponent,
 
 
   ],
@@ -84,7 +87,8 @@ import { UpdateUniversiteComponent } from './universite/update-universite/update
     BrowserAnimationsModule,
     MatSnackBarModule,
     NgxPaginationModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ng2OrderModule,
   ],
   providers: [authInterceptorProviders, DatePipe],
   bootstrap: [AppComponent],

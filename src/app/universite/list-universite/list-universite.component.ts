@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Department } from 'src/app/Models/Department';
+import { Universite } from 'src/app/Models/universite';
 import { UniversiteService } from 'src/app/Services/universite.service';
 import Swal from 'sweetalert2';
 
@@ -15,6 +17,14 @@ export class ListUniversiteComponent implements OnInit {
     localisation:'',
     region:''
   };
+
+  uniData={
+    id:'',
+    nomUniversite:'',
+  };
+
+  uni:Universite=new Universite();
+
   totalLength:any;
   page:number = 1;
   constructor(private universite:UniversiteService) { }
@@ -66,6 +76,16 @@ export class ListUniversiteComponent implements OnInit {
      });
 
     }
+    
+  key: string = 'nomDepartment';
+  reverse: boolean = false ;
+  sort(key:any){
+    this.key=key;
+    this.reverse = !this.reverse;
+  }
 
+  selectUniversite(u:any){
+    this.uni=u;
 
+  }
 }

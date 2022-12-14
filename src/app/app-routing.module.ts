@@ -16,7 +16,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { UserGuard } from './Services/user.guard';
 
-import {AddEtudiantToEquipeContratComponent} from "./etudiant/add-etudiant-to-equipe-contrat/add-etudiant-to-equipe-contrat.component";
+//import {AddEtudiantToEquipeContratComponent} from "./etudiant/add-etudiant-to-equipe-contrat/add-etudiant-to-equipe-contrat.component";
 
 import { UpdateEtudiantComponent } from './Etudiant/update-etudiant/update-etudiant.component';
 import { UpdateEquipeComponent } from './equipe/update-equipe/update-equipe.component';
@@ -40,7 +40,8 @@ const routes: Routes = [
          { path:'list-equipe',component: ListEquipeComponent},
          { path:'add-equipe',component: AddEquipeComponent},
        //  {path:'add-etudiant', component:AddEtudiantComponent},
-         { path:'add-department',component: AddDepartmentsComponent},
+        // { path:'add-department',component: AddDepartmentsComponent},
+        { path:'add-department',loadChildren:()=>import('./departments/add-departments/department.module').then(m=>m.DepartmentModule)},
          {path:'list-department', component:ListDepartmentsComponent},
          { path:'update-department/:id', component:UpdateDepartmentsComponent},
          { path:'add-universite',component: AddUniversiteComponent},
@@ -57,7 +58,7 @@ const routes: Routes = [
          { path:'update-equipe/:id', component:UpdateEquipeComponent},
          { path:'modifier-contrat/:id', component:ModifierContratComponent},
        //  {path:'add-etudiant', component:AddEtudiantComponent},
-         {path:'add-etudiant-to-equipe-contrat', component:AddEtudiantToEquipeContratComponent}
+         //{path:'add-etudiant-to-equipe-contrat', component:AddEtudiantToEquipeContratComponent}
         ]},
 
 

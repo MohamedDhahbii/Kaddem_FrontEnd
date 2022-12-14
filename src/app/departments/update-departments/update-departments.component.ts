@@ -45,5 +45,6 @@ export class UpdateDepartmentsComponent implements OnInit {
     }
    )
   }
+  
 
 }

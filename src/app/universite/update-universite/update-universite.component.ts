@@ -31,11 +31,9 @@ export class UpdateUniversiteComponent implements OnInit {
       }
     )
   }
-  updateData(){
-    console.log("update");
-    console.log(this.uni);
-   // alert('clicked');
-   this.universite.updateUniversite(this.uni).subscribe(
+  updateData(f:any){
+    
+   this.universite.updateUniversite(f).subscribe(
     
     (data)=>{
       Swal.fire('Success !!', 'Universite modifié avec succé', 'success').then((e)=>{
