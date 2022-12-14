@@ -16,7 +16,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { authInterceptorProviders } from './Services/auth.Interceptor';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-//import { AddEtudiantComponent } from './Etudiant/add-etudiant/add-etudiant.component';
+//import { AddEtudiantComponent } from './Etudiant/add-etudiant/add-etudiant.component';>>>>>>> master
 import { ProfileComponent } from './profile/profile.component';
 
 import { ListEquipeComponent } from './equipe/list-equipe/list-equipe.component';
@@ -67,14 +67,18 @@ import { StatsComponent } from './stats/stats.component';
     ListEquipeComponent,
     AddEquipeComponent,
     UpdateEquipeComponent,
+
+   // AddEtudiantToEquipeContratComponent,
+
     //AddEtudiantToEquipeContratComponent,
+
     ListDepartmentsComponent,
     AddDepartmentsComponent,
     DeleteDepartmentsComponent,
     UpdateDepartmentsComponent,
     UpdateEtudiantComponent,
     AddContratComponent,
-    ListContratComponent,
+    //ListContratComponent,
     ModifierContratComponent,
     SearchComponent,
     AddDetailEquipeComponent,
