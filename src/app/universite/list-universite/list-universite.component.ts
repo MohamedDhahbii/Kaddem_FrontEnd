@@ -23,6 +23,7 @@ export class ListUniversiteComponent implements OnInit {
     nomUniversite:'',
   };
 
+  searchText:string='';
   uni:Universite=new Universite();
 
   totalLength:any;
@@ -87,5 +88,11 @@ export class ListUniversiteComponent implements OnInit {
   selectUniversite(u:any){
     this.uni=u;
 
+  }
+
+  onSearchTextChanged(searchValue:string){
+
+    this.searchText = searchValue;
+    console.log(this.searchText);
   }
 }

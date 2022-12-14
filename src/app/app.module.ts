@@ -43,6 +43,7 @@ import { ListUniversiteComponent } from './universite/list-universite/list-unive
 import { UpdateUniversiteComponent } from './universite/update-universite/update-universite.component';
 import { Ng2OrderModule } from 'ng2-order-pipe';
 import { SelectedUniversiteComponent } from './universite/selected-universite/selected-universite.component';
+import { Search4Component } from './search4/search4.component';
 
 
 
@@ -76,6 +77,7 @@ import { SelectedUniversiteComponent } from './universite/selected-universite/se
     ListUniversiteComponent,
     UpdateUniversiteComponent,
     SelectedUniversiteComponent,
+    Search4Component,
 
 
   ],

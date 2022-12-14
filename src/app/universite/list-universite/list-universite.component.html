@@ -4,12 +4,13 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-11 container">
+              <app-search4 (searchTextChanged)="onSearchTextChanged($event)"></app-search4>
               <div class="card">
                 <!-- /.card-header -->
                 <div class="card-body">
                   <table id="example2" class="table table-bordered table-hover">
                     <thead>
-                    <tr>
+                    <tr  >
                       <th >Universite id</th>
                       <th (click) = "sort('nomUniversite')">Nom universite&nbsp;<i class="fa fa-sort"></i></th>
                       <th>Localisation</th>
@@ -23,7 +24,7 @@
                       totalItems:totalLength  
                      }" 
                     >
-                    <tr (click)="selectUniversite(u)">
+                    <tr *ngIf="searchText === '' || u.nomUniversite.toLowerCase().includes(searchText) " (click)="selectUniversite(u)">
                       <td>{{u.id}}</td>
                       <td>{{u.nomUniversite}}</td>   
                       <td>{{u.localisation}}</td> 
